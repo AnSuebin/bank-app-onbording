@@ -8,7 +8,7 @@ const Close = styled.button`
 `;
 
 const CloseButton = () => {
-  return <Close>X</Close>;
+  return <Close>╳</Close>;
 };
 
 export default CloseButton;
