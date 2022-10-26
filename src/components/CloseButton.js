@@ -7,8 +7,17 @@ const Close = styled.button`
   padding: 10px;
 `;
 
+const CloseContainer = styled.div`
+  display: flex;
+  justify-content: end;
+`;
+
 const CloseButton = () => {
-  return <Close>╳</Close>;
+  return (
+    <CloseContainer>
+      <Close>╳</Close>
+    </CloseContainer>
+  );
 };
 
 export default CloseButton;
