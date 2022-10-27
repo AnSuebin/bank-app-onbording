@@ -6,6 +6,7 @@ const Button = styled.button`
   height: 56px;
   background-color: ${(props) => props.backgroundColor};
   border: none;
+  text-decoration: none;
 `;
 
 const ButtonContainer = styled.div`
