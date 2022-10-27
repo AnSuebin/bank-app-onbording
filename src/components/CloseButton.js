@@ -5,6 +5,7 @@ const Close = styled.button`
   border: none;
   font-size: 16px;
   padding: 10px;
+  text-decoration: none;
 `;
 
 const CloseContainer = styled.div`
