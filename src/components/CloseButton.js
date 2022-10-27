@@ -6,6 +6,8 @@ const Close = styled.button`
   font-size: 16px;
   padding: 10px;
   text-decoration: none;
+  color: #222222;
+  cursor: pointer;
 `;
 
 const CloseContainer = styled.div`
