@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Safety from './pages/Satety';
+import Safety from './pages/Safety';
 import Convenience from './pages/Convenience';
 import Accessibility from './pages/Accessibility';
 import Professionalism from './pages/Professionalism';
