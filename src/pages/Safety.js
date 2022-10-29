@@ -4,9 +4,20 @@ import Header from '../components/Header';
 import PhoneBackground from '../components/PhoneBackground';
 import { mockData } from '../data/mockData';
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import bankIcon from '../utils/safety/bank-icon.png';
+import styled, { keyframes } from 'styled-components';
 import WaringIcon from '../utils/safety/waring-icon.png';
+import bankIcon from '../utils/safety/bank-icon.png';
+
+const fadeIn = keyframes`
+from {
+  opacity: 0;
+  transform: translateY(50px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+`;
 
 const Main = styled.div`
   display: flex;
@@ -19,6 +30,10 @@ const MainImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-name: ${fadeIn};
+  animation-fill-mode: forwards;
 `;
 
 const WarningBox = styled.div`
@@ -38,6 +53,9 @@ const WarningBox = styled.div`
   background-color: #ffffff;
   box-shadow: 5px 5px 12px rgba(144, 145, 146, 0.2);
   padding: 17px 20px;
+  img {
+    width: 40px;
+  }
   p {
     margin-top: 10px;
     font-weight: 500;
@@ -71,6 +89,9 @@ const BankContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    width: 32px;
+  }
 `;
 
 const DeleteBox = styled.div`
@@ -114,18 +135,18 @@ const Safety = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Header firstLineColor="#F8D459" />
       <Main>
         <Title subTitle={title} mainTitle={subtitle} />
         <MainImageContainer>
           <WarningBox>
-            <img src={WaringIcon} />
+            <img src={WaringIcon} alt="악성앱 탐지 아이콘" />
             <p>{text}</p>
           </WarningBox>
           <DeleteBox>
             <BankContainer>
-              <img src={bankIcon} />
+              <img src={bankIcon} alt="kb 국민은행 app 아이콘" />
               <BankName>
                 <h5>KB 국민은행</h5>
                 <p>KB 국민은행 KB 국민은행</p>
@@ -137,7 +158,7 @@ const Safety = () => {
         <PhoneBackground />
       </Main>
       <BottomButton backLocation="/" nextLocation="/convenience" />
-    </div>
+    </>
   );
 };
 
