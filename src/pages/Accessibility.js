@@ -17,7 +17,11 @@ const Accessibility = () => {
 
   return (
     <div>
-      <Header thirdLineColor="#F8D459" />
+      <Header
+        firstLineColor="#F8D459"
+        secondLineColor="#F8D459"
+        thirdLineColor="#F8D459"
+      />
       <Title subTitle={title} mainTitle={subtitle} />
       <PhoneBackground />
       <BottomButton

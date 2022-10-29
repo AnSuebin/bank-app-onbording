@@ -16,9 +16,10 @@ const Convenience = () => {
   }, []);
   return (
     <div>
-      <Header secondLineColor="#F8D459" />
+      <Header firstLineColor="#F8D459" secondLineColor="#F8D459" />
       <Title subTitle={title} mainTitle={subtitle} />
       <PhoneBackground />
+
       <BottomButton backLocation="/safety" nextLocation="/accessibility" />
     </div>
   );

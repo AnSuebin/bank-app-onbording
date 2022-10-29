@@ -11,6 +11,8 @@ const Button = styled.button`
   font-size: 16px;
   color: #222222;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 `;
 
 const ButtonContainer = styled.div`
@@ -18,6 +20,8 @@ const ButtonContainer = styled.div`
   justify-content: space-between;
   position: absolute;
   bottom: 0;
+  margin: 0;
+  padding: 0;
 `;
 
 const BottomButton = ({ backLocation, nextLocation }) => {
