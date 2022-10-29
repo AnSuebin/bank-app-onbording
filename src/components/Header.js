@@ -4,7 +4,7 @@ import CloseButton from './CloseButton';
 import NavigationBar from './NavigationBar';
 
 const HeaderContainer = styled.div`
-  margin: 30px 20px 30px 20px;
+  margin: 18px 20px 42px 20px;
 `;
 
 const Header = ({
