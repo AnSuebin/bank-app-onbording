@@ -17,6 +17,15 @@ to {
 }
 `;
 
+const opacity = keyframes`
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+`;
+
 const Main = styled.div`
   display: flex;
   flex-direction: column;
@@ -91,7 +100,7 @@ const SubmitButton = styled.button`
   width: 242px;
   height: 66px;
   border-radius: 14px;
-  background: #ffffff;
+
   background: #f8d459;
   border: none;
   box-shadow: 5.06896px 5.06896px 12.6724px rgba(144, 145, 146, 0.2);
@@ -145,6 +154,10 @@ const InfoContainer = styled.div`
 const Info = styled.div`
   display: flex;
   align-items: center;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-name: ${opacity};
+  animation-fill-mode: forwards;
   h5 {
     margin-left: 8px;
     font-family: 'Spoqa Han Sans Neo';
@@ -247,7 +260,9 @@ const Professionalism = () => {
           <PhoneBackground />
         </MainImageContainer>
       </Main>
-      <BottomButton backLocation="/accessibility" nextLocation="/economics" />
+      {isClick === true && (
+        <BottomButton backLocation="/accessibility" nextLocation="/economics" />
+      )}
     </div>
   );
 };

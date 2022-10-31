@@ -16,10 +16,11 @@ const SubTitle = styled.div`
   color: #1355b4;
   font-size: 18px;
   font-weight: 400;
-  animation-duration: 0.75s;
+  animation-duration: 0.55s;
+  animation-delay: 0.5s;
   animation-timing-function: ease-in-out;
   animation-name: ${fadeIn};
-  animation-fill-mode: forwards;
+  animation-fill-mode: backwards;
 `;
 
 const MainTitle = styled.div`

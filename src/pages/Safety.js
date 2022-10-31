@@ -19,6 +19,15 @@ to {
 }
 `;
 
+const opacity = keyframes`
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+`;
+
 const Main = styled.div`
   display: flex;
   flex-direction: column;
@@ -119,6 +128,33 @@ const DeleteBox = styled.div`
     background: #ffc544;
     border: none;
     border-radius: 4px;
+    color: #222222;
+  }
+`;
+
+const SuccessContainer = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 62px;
+  div {
+    width: 120px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #222222;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
+    animation-name: ${opacity};
+    animation-fill-mode: forwards;
   }
 `;
 
@@ -126,6 +162,7 @@ const Safety = () => {
   const [title, setTitle] = useState('');
   const [subtitle, setSubTitle] = useState('');
   const [text, setText] = useState('');
+  const [isClick, setIsClick] = useState(false);
 
   useEffect(() => {
     const [pageData] = mockData.filter((page) => page.id === 1);
@@ -140,20 +177,36 @@ const Safety = () => {
       <Main>
         <Title subTitle={title} mainTitle={subtitle} />
         <MainImageContainer>
-          <WarningBox>
-            <img src={WaringIcon} alt="악성앱 탐지 아이콘" />
-            <p>{text}</p>
-          </WarningBox>
-          <DeleteBox>
-            <BankContainer>
-              <img src={bankIcon} alt="kb 국민은행 app 아이콘" />
-              <BankName>
-                <h5>KB 국민은행</h5>
-                <p>KB 국민은행 KB 국민은행</p>
-              </BankName>
-            </BankContainer>
-            <button>삭제</button>
-          </DeleteBox>
+          {/* 클릭 전 */}
+          {isClick === false && (
+            <>
+              <WarningBox>
+                <img src={WaringIcon} alt="악성앱 탐지 아이콘" />
+                <p>{text}</p>
+              </WarningBox>
+              <DeleteBox>
+                <BankContainer>
+                  <img src={bankIcon} alt="kb 국민은행 app 아이콘" />
+                  <BankName>
+                    <h5>KB 국민은행</h5>
+                    <p>KB 국민은행 KB 국민은행</p>
+                  </BankName>
+                </BankContainer>
+                <button
+                  onClick={() => {
+                    setIsClick(true);
+                  }}
+                >
+                  삭제
+                </button>
+              </DeleteBox>
+            </>
+          )}
+          {isClick === true && (
+            <SuccessContainer>
+              <div>악성앱을 성공적으로 삭제했습니다!</div>
+            </SuccessContainer>
+          )}
         </MainImageContainer>
         <PhoneBackground />
       </Main>
