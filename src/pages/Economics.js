@@ -21,6 +21,15 @@ to {
 }
 `;
 
+const opacity = keyframes`
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+`;
+
 const comeUpandDown = keyframes`
 from{
   transform: translate(-50%, 200px);
@@ -66,7 +75,7 @@ const WhiteGradientBox = styled.div`
 const WhiteBox = styled.div`
   position: absolute;
   width: 294px;
-  height: 139px;
+  height: 250px;
   left: 50%;
   top: 316px;
   transform: translateX(-50%);
@@ -100,7 +109,7 @@ const EventBox = styled.div`
   border-radius: 14px 14px 0px 0px;
 
   animation-duration: 1.7s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in;
   animation-name: ${comeUpandDown};
   animation-fill-mode: none;
   p {
@@ -168,9 +177,9 @@ const EventDetailWrapper = styled.div`
   transform: translateX(-50%);
   width: 294px;
   height: 270px;
-
   background: linear-gradient(180deg, #e9ecef 0%, rgba(233, 236, 239, 0) 100%);
   border-radius: 36px 36px 0px 0px;
+
   div {
     overflow-y: auto;
     overflow-x: hidden;
@@ -188,6 +197,10 @@ const EventDetailWrapper = styled.div`
       height: 383px;
       margin-bottom: 30px;
       mix-blend-mode: darken;
+      animation-duration: 0.75s;
+      animation-timing-function: ease-in-out;
+      animation-name: ${opacity};
+      animation-fill-mode: forwards;
     }
   }
 `;
@@ -248,11 +261,13 @@ const Economics = () => {
           </>
         )}
       </Main>
-      <BottomButton
-        backLocation="/professionalism"
-        nextLocation="/intuition"
-        alt="6% 적금 가입"
-      />
+      {isClick === true && (
+        <BottomButton
+          backLocation="/professionalism"
+          nextLocation="/intuition"
+          delay="0.75s"
+        />
+      )}
     </div>
   );
 };

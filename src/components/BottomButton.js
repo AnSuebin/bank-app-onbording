@@ -31,16 +31,17 @@ const ButtonContainer = styled.div`
   bottom: 0;
   margin: 0;
   padding: 0;
+  animation-delay: ${(props) => props.delay || 0};
   animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
   animation-name: ${opacity};
-  animation-fill-mode: forwards;
+  animation-fill-mode: backwards;
 `;
 
-const BottomButton = ({ backLocation, nextLocation }) => {
+const BottomButton = ({ backLocation, nextLocation, delay }) => {
   const navigate = useNavigate();
   return (
-    <ButtonContainer>
+    <ButtonContainer delay={delay}>
       <Button
         backgroundColor="#E9ECEF"
         onClick={() => {

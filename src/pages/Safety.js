@@ -210,7 +210,9 @@ const Safety = () => {
         </MainImageContainer>
         <PhoneBackground />
       </Main>
-      <BottomButton backLocation="/" nextLocation="/convenience" />
+      {isClick === true && (
+        <BottomButton backLocation="/" nextLocation="/convenience" />
+      )}
     </>
   );
 };
