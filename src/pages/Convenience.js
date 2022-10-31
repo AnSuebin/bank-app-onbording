@@ -137,7 +137,11 @@ const Convenience = () => {
           <PhoneBackground />
         </MainImageContainer>
       </Main>
-      <BottomButton backLocation="/safety" nextLocation="/accessibility" />
+      <BottomButton
+        backLocation="/safety"
+        nextLocation="/accessibility"
+        delay="5s"
+      />
     </>
   );
 };
