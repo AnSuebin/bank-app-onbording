@@ -8,6 +8,8 @@ import styled, { keyframes } from 'styled-components';
 //로티 테스트
 // import Lottie from 'lottie-react';
 // import loadingLottie from '../assets/lottie/Inter_voice.json';
+import facetalk from '../utils/facetalk.gif';
+import myfacetalk from '../utils/myfacetalk.gif';
 
 const fadeIn = keyframes`
 from {
@@ -61,6 +63,7 @@ const WhiteGradientBox = styled.div`
   height: 139px;
   left: 50%;
   top: 187px;
+  z-index: 2;
   transform: translateX(-50%);
   background: linear-gradient(
     180deg,
@@ -78,7 +81,7 @@ const WhiteBox = styled.div`
   top: 334px;
   transform: translateX(-50%);
   background: #ffffff;
-  z-index: 2;
+  z-index: 4;
 `;
 
 const ConvenienceConatiner = styled.div`
@@ -87,6 +90,7 @@ const ConvenienceConatiner = styled.div`
   height: 290px;
   top: 204px;
   left: 50%;
+  z-index: 3;
   transform: translate(-133px);
 `;
 
@@ -104,12 +108,31 @@ const Conversation = styled.div`
   height: 38px;
   background: #f8d459;
   border-radius: 2px 20px 20px 20px;
-  z-index: 1;
+  z-index: 10;
   animation-delay: 0.8s;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-name: ${comeUp};
   animation-fill-mode: backwards;
+`;
+const Myfacetalk = styled.img`
+  position: absolute;
+  width: 69px;
+  height: 105px;
+  left: 50%;
+  transform: translateX(60px);
+  top: 54px;
+  z-index: 5;
+`;
+
+const Facetalk = styled.img`
+  position: absolute;
+  width: 294px;
+  height: 290px;
+  left: 50%;
+  top: 36px;
+  transform: translateX(-50%);
+  border-radius: 36px 36px 0px 0px;
 `;
 
 const Convenience = () => {
@@ -129,12 +152,14 @@ const Convenience = () => {
         <MainImageContainer>
           <WhiteGradientBox></WhiteGradientBox>
           <WhiteBox></WhiteBox>
+          <Myfacetalk src={myfacetalk} />
+          <Facetalk src={facetalk} />
           <ConvenienceConatiner>
             <Conversation width="96px">안녕하세요</Conversation>
             <Conversation width="111px">김리브 고객님</Conversation>
             <Conversation width="181px">회원가입이 어려우신가요?</Conversation>
           </ConvenienceConatiner>
-          <PhoneBackground />
+          {/* <PhoneBackground /> */}
         </MainImageContainer>
       </Main>
       <BottomButton

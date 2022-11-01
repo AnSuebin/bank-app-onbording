@@ -5,6 +5,9 @@ import PhoneBackground from '../components/PhoneBackground';
 import { mockData } from '../data/mockData';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+// 로티
+import Lottie from 'lottie-react';
+import chart from '../assets/lottie/chart.json';
 
 const fadeIn = keyframes`
 from {
@@ -115,9 +118,9 @@ const SubmitButton = styled.button`
 const GraphBox = styled.div`
   box-sizing: border-box;
   position: absolute;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-end; */
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
@@ -127,7 +130,9 @@ const GraphBox = styled.div`
   border-radius: 14px;
   background-color: #ffffff;
   box-shadow: 5px 5px 12px rgba(144, 145, 146, 0.2);
-  padding-bottom: 22.49px;
+`;
+const GrapAnimationContainer = styled.div`
+  margin-top: -20px;
 `;
 
 const Grap = styled.div`
@@ -249,10 +254,17 @@ const Professionalism = () => {
                 </Info>
               </InfoContainer>
               <GraphBox>
-                <Grap height="69.52px" background="#D65C49"></Grap>
+                <GrapAnimationContainer>
+                  <Lottie
+                    animationData={chart}
+                    loop="true"
+                    style={{ height: 195 }}
+                  />
+                </GrapAnimationContainer>
+                {/* <Grap height="69.52px" background="#D65C49"></Grap>
                 <Grap height="80.15px" background="#E38337"></Grap>
                 <Grap height="102.32px" background="#9DB953"></Grap>
-                <Grap height="50.51px" background="#5BBACE"></Grap>
+                <Grap height="50.51px" background="#5BBACE"></Grap> */}
               </GraphBox>
             </>
           )}

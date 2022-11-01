@@ -5,8 +5,11 @@ import PhoneBackground from '../components/PhoneBackground';
 import { mockData } from '../data/mockData';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import WaringIcon from '../utils/safety/waring-icon.png';
+import WaringIcon from '../utils/safety/warning-icon.png';
 import bankIcon from '../utils/safety/bank-icon.png';
+// 로티
+import Lottie from 'lottie-react';
+import complete from '../assets/lottie/complete.json';
 
 const fadeIn = keyframes`
 from {
@@ -141,8 +144,9 @@ const SuccessContainer = styled.div`
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-  top: 62px;
-  div {
+  top: 107px;
+  div:nth-child(2) {
+    margin-top: 7px;
     width: 120px;
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 500;
@@ -204,6 +208,11 @@ const Safety = () => {
           )}
           {isClick === true && (
             <SuccessContainer>
+              <Lottie
+                animationData={complete}
+                loop="false"
+                style={{ height: 84 }}
+              />
               <div>악성앱을 성공적으로 삭제했습니다!</div>
             </SuccessContainer>
           )}
