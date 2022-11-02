@@ -193,7 +193,7 @@ const Safety = () => {
                   <img src={bankIcon} alt="kb 국민은행 app 아이콘" />
                   <BankName>
                     <h5>KB 국민은행</h5>
-                    <p>KB 국민은행 KB 국민은행</p>
+                    <p>caklsdhrslkhkg4</p>
                   </BankName>
                 </BankContainer>
                 <button
