@@ -5,11 +5,8 @@ import PhoneBackground from '../components/PhoneBackground';
 import { mockData } from '../data/mockData';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-//로티 테스트
-// import Lottie from 'lottie-react';
-// import loadingLottie from '../assets/lottie/Inter_voice.json';
-import facetalk from '../utils/facetalk.gif';
-import myfacetalk from '../utils/myfacetalk.gif';
+import facetalk from '../utils/convenience/facetalk.gif';
+import myfacetalk from '../utils/convenience/myfacetalk.gif';
 
 const fadeIn = keyframes`
 from {
@@ -59,26 +56,26 @@ const MainImageContainer = styled.div`
 
 const WhiteGradientBox = styled.div`
   position: absolute;
-  width: 294px;
+  width: 312px;
   height: 139px;
   left: 50%;
-  top: 187px;
+  top: 190px;
   z-index: 2;
   transform: translateX(-50%);
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0) 5.61%,
-    rgba(255, 255, 255, 0.660156) 41.5%,
-    #ffffff 73.83%
+    rgba(255, 255, 255, 0) 21.58%,
+    rgba(255, 255, 255, 0.463542) 49.56%,
+    #ffffff 85.92%
   );
 `;
 
 const WhiteBox = styled.div`
   position: absolute;
-  width: 294px;
+  width: 312px;
   height: 139px;
   left: 50%;
-  top: 334px;
+  top: 325.9px;
   transform: translateX(-50%);
   background: #ffffff;
   z-index: 4;
@@ -86,23 +83,25 @@ const WhiteBox = styled.div`
 
 const ConvenienceConatiner = styled.div`
   position: absolute;
-  width: 294px;
   height: 290px;
-  top: 204px;
+  top: 196px;
   left: 50%;
   z-index: 3;
-  transform: translate(-133px);
+  transform: translate(-136px);
 `;
 
 const Conversation = styled.div`
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
   margin-bottom: 8px;
   font-family: 'Spoqa Han Sans Neo';
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
   color: #222222;
   width: ${(props) => props.width};
   height: 38px;
@@ -115,34 +114,37 @@ const Conversation = styled.div`
   animation-name: ${comeUp};
   animation-fill-mode: backwards;
 `;
-const Myfacetalk = styled.img`
-  position: absolute;
-  width: 69px;
-  height: 105px;
-  left: 50%;
-  transform: translateX(60px);
-  top: 54px;
-  z-index: 5;
-`;
 
 const Facetalk = styled.img`
   position: absolute;
-  width: 294px;
-  height: 290px;
+  width: 312px;
+  height: 296px;
   left: 50%;
-  top: 36px;
+  top: 32px;
   transform: translateX(-50%);
   border-radius: 36px 36px 0px 0px;
+`;
+
+const Myfacetalk = styled.img`
+  position: absolute;
+  width: 72px;
+  height: 104px;
+  left: 50%;
+  transform: translateX(64px);
+  top: 52px;
+  z-index: 5;
 `;
 
 const Convenience = () => {
   const [title, setTitle] = useState('');
   const [subtitle, setSubTitle] = useState('');
+  const [conversation, setConversation] = useState([]);
 
   useEffect(() => {
     const [pageData] = mockData.filter((page) => page.id === 2);
     setTitle(pageData.title);
     setSubTitle(pageData.subTitle);
+    setConversation(pageData.text);
   }, []);
   return (
     <>
@@ -155,11 +157,12 @@ const Convenience = () => {
           <Myfacetalk src={myfacetalk} />
           <Facetalk src={facetalk} />
           <ConvenienceConatiner>
-            <Conversation width="96px">안녕하세요</Conversation>
-            <Conversation width="111px">김리브 고객님</Conversation>
-            <Conversation width="181px">회원가입이 어려우신가요?</Conversation>
+            {conversation.map((conversation) => (
+              <Conversation width={`${conversation.length * 11.4}px`}>
+                {conversation}
+              </Conversation>
+            ))}
           </ConvenienceConatiner>
-          {/* <PhoneBackground /> */}
         </MainImageContainer>
       </Main>
       <BottomButton
