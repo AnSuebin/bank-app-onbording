@@ -84,6 +84,7 @@ const WarningBox = styled.div`
     position: relative;
   }
 `;
+
 const Yellowline = styled.div`
   width: 83px;
   height: 3px;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const Close = styled.button`
   background-color: transparent;
@@ -24,9 +25,16 @@ const CloseContainer = styled.div`
 `;
 
 const CloseButton = () => {
+  const navigate = useNavigate();
   return (
     <CloseContainer>
-      <Close>건너뛰기</Close>
+      <Close
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        건너뛰기
+      </Close>
     </CloseContainer>
   );
 };
