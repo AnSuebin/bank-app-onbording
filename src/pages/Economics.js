@@ -10,6 +10,10 @@ import menu from '../utils/economics/menu-icon.png';
 import point from '../utils/economics/point-img.png';
 import eventDetail from '../utils/economics/event.png';
 
+// 로티
+import Lottie from 'lottie-react';
+import coin from '../assets/lottie/coin.json';
+
 const fadeIn = keyframes`
 from {
   opacity: 0;
@@ -21,21 +25,23 @@ to {
 }
 `;
 
+const fadeInbutton = keyframes`
+from {
+  opacity: 0.5;
+  transform: translate(-50%, 50px);
+}
+to {
+  opacity: 1;
+  transform: translate(-50%,0);
+}
+`;
+
 const opacity = keyframes`
 from {
   opacity: 0;
 }
 to {
   opacity: 1;
-}
-`;
-
-const comeUpandDown = keyframes`
-from{
-  transform: translate(-50%, 200px);
-}
-to{
-  transform: translateY(-50%, 0px);
 }
 `;
 
@@ -58,10 +64,10 @@ const MainImageContainer = styled.div`
 
 const WhiteGradientBox = styled.div`
   position: absolute;
-  width: 294px;
-  height: 90px;
+  width: 312px;
+  height: 76px;
   left: 50%;
-  top: 236px;
+  top: 266px;
   z-index: 3;
   transform: translateX(-50%);
   background: linear-gradient(
@@ -72,16 +78,16 @@ const WhiteGradientBox = styled.div`
   );
 `;
 
-const WhiteBox = styled.div`
-  position: absolute;
-  width: 294px;
-  height: 250px;
-  left: 50%;
-  top: 316px;
-  transform: translateX(-50%);
-  background: #ffffff;
-  z-index: 3;
-`;
+// const WhiteBox = styled.div`
+//   position: absolute;
+//   width: 294px;
+//   height: 250px;
+//   left: 50%;
+//   top: 316px;
+//   transform: translateX(-50%);
+//   background: #ffffff;
+//   z-index: 3;
+// `;
 
 const LogoImg = styled.img`
   width: 104px;
@@ -98,58 +104,83 @@ const MenuImg = styled.img`
 const EventBox = styled.div`
   box-sizing: border-box;
   position: absolute;
-  padding: 20.25px 27.5px;
-  z-index: 2;
-  top: 133px;
+  padding-top: 32px;
+  z-index: 3;
+  top: 85px;
   left: 50%;
   transform: translateX(-50%);
-  width: 262px;
-  height: 184px;
-  background: #fff2d7;
-  border-radius: 14px 14px 0px 0px;
-
-  animation-duration: 1.7s;
-  animation-timing-function: ease-in;
-  animation-name: ${comeUpandDown};
-  animation-fill-mode: none;
+  width: 312px;
+  height: 231px;
+  background: #fdf1d7;
+  border: 2px solid #ffc544;
+  border-radius: 14px;
+  animation-delay: 0.25s;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-name: ${fadeInbutton};
+  animation-fill-mode: backwards;
   p {
+    margin-left: 32px;
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 500;
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 15px;
+    line-height: 19px;
     letter-spacing: -0.02em;
     color: #343434;
   }
   h2 {
-    margin-top: 15.5px;
-    width: 96px;
+    margin-top: 12px;
+    margin-left: 32px;
+    width: 100px;
     font-family: 'Spoqa Han Sans Neo';
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 21px;
     letter-spacing: -0.02em;
-
     color: #222222;
+    line-height: 32px;
+    span {
+      font-weight: 700;
+    }
   }
   img {
     position: absolute;
-    right: 20.03px;
-    top: 69px;
-    width: 121.61px;
-    height: 72px;
+    right: 32px;
+    top: 56px;
+    width: 125px;
+    height: 83px;
+  }
+  button {
+    margin-top: 21px;
+    margin-left: 22px;
+    width: 268px;
+    height: 56px;
+    background: #ffc544;
+    border: 2.5px solid #ffc544;
+    box-shadow: 5.06896px 5.06896px 12.6724px rgba(144, 145, 146, 0.2);
+    border-radius: 14px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: #343434;
   }
 `;
 
-const BlackPhone = styled.div`
+const SmallPhone = styled.div`
   position: absolute;
   z-index: 1;
-  top: 36px;
+  top: 32px;
   left: 50%;
   transform: translateX(-50%);
-  width: 294px;
-  height: 290px;
-  border-radius: 36.75px 36.75px 0px 0px;
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-  opacity: 0.45;
+  width: 272px;
+  height: 304px;
+  background: linear-gradient(
+    180deg,
+    #e9ecef 74.01%,
+    rgba(233, 236, 239, 0) 100%
+  );
+  border-radius: 36px 36px 0px 0px;
 `;
 
 const PhoneHeader = styled.div`
@@ -157,12 +188,12 @@ const PhoneHeader = styled.div`
   position: absolute;
   display: flex;
   justify-content: space-between;
-  padding: 22px 28px 0px 17px;
-  z-index: -1;
-  top: 36px;
+  padding: 18px 28px 0px 19px;
+  z-index: 2;
+  top: 32px;
   left: 50%;
   transform: translateX(-50%);
-  width: 294px;
+  width: 272px;
   height: 290px;
 `;
 
@@ -175,32 +206,23 @@ const EventDetailWrapper = styled.div`
   top: 36px;
   left: 50%;
   transform: translateX(-50%);
-  width: 294px;
-  height: 270px;
-  background: linear-gradient(180deg, #e9ecef 0%, rgba(233, 236, 239, 0) 100%);
+  width: 312px;
+  height: 296px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 36px 36px 0px 0px;
 
   div {
-    overflow-y: auto;
-    overflow-x: hidden;
-    &::-webkit-scrollbar {
-      width: 1px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: transparent;
-    }
-    &::-webkit-scrollbar-track {
-      background-color: transparent;
+    overflow: hidden;
+    div:nth-child(1) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
     }
     img {
-      width: 266px;
-      height: 383px;
-      margin-bottom: 30px;
-      mix-blend-mode: darken;
-      animation-duration: 0.75s;
-      animation-timing-function: ease-in-out;
-      animation-name: ${opacity};
-      animation-fill-mode: forwards;
+      width: 280px;
     }
   }
 `;
@@ -228,19 +250,24 @@ const Economics = () => {
         <Title subTitle={title} mainTitle={subtitle} />
         <MainImageContainer>
           <WhiteGradientBox></WhiteGradientBox>
-          <WhiteBox></WhiteBox>
+          {/* <WhiteBox></WhiteBox> */}
           {isClick === false && (
             <>
-              <EventBox
-                onClick={() => {
-                  setIsClick(true);
-                }}
-              >
-                <p>[KB스타페이적금] 가입 이벤트</p>
-                <h2>최고 연 6% 적금 가입</h2>
+              <EventBox>
+                <p>KB스타페이적금 가입 이벤트</p>
+                <h2>
+                  <span>최고 연 6%</span>적금 가입
+                </h2>
                 <img src={point}></img>
+                <button
+                  onClick={() => {
+                    setIsClick(true);
+                  }}
+                >
+                  이벤트 확인해보기
+                </button>
               </EventBox>
-              <BlackPhone></BlackPhone>
+              <SmallPhone></SmallPhone>
               <PhoneHeader>
                 <LogoImg src={logo} alt="국민은행 로고" />
                 <MenuImg src={menu} alt="메뉴" />
@@ -250,16 +277,17 @@ const Economics = () => {
           {isClick === true && (
             <EventDetailWrapper>
               <div>
+                <Lottie animationData={coin} loop="false" />
                 <img src={eventDetail} />
               </div>
             </EventDetailWrapper>
           )}
         </MainImageContainer>
-        {isClick === false && (
+        {/* {isClick === false && (
           <>
             <PhoneBackground />
           </>
-        )}
+        )} */}
       </Main>
       {isClick === true && (
         <BottomButton
