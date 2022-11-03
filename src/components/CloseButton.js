@@ -20,6 +20,7 @@ const CloseContainer = styled.div`
   display: flex;
   margin-top: 8px;
   justify-content: end;
+  margin-right: 7px;
 `;
 
 const CloseButton = () => {
