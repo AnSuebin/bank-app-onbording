@@ -5,9 +5,7 @@ import PhoneBackground from '../components/PhoneBackground';
 import { mockData } from '../data/mockData';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-// 로티
-import Lottie from 'lottie-react';
-import chart from '../assets/lottie/chart.json';
+import portfolio from '../utils/professionalism/portfolio.png';
 
 const fadeIn = keyframes`
 from {
@@ -20,12 +18,13 @@ to {
 }
 `;
 
-const opacity = keyframes`
+const ScrollUp = keyframes`
 from {
-  opacity: 0;
+  transform: translateY(0);
 }
 to {
-  opacity: 1;
+
+  transform: translateY(-310px);
 }
 `;
 
@@ -56,9 +55,9 @@ const InfoBox = styled.div`
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-  top: 62px;
-  width: 242px;
-  height: 127px;
+  top: 56px;
+  width: 268px;
+  height: 122px;
   border-radius: 14px;
   background-color: #ffffff;
   box-shadow: 5px 5px 12px rgba(144, 145, 146, 0.2);
@@ -66,137 +65,201 @@ const InfoBox = styled.div`
   h5 {
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
     letter-spacing: -0.02em;
     color: #343434;
   }
   h3 {
-    padding-top: 5px;
+    padding-top: 12px;
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 500;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 20px;
     letter-spacing: -0.02em;
     color: #343434;
   }
+  div {
+    position: relative;
+  }
   p {
-    padding-top: 5px;
+    padding-top: 8px;
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 500;
     font-size: 11px;
     line-height: 14px;
+    text-align: center;
     letter-spacing: -0.02em;
-    color: #979797;
+    color: #8f989c;
   }
+`;
+
+const Yellowline = styled.div`
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background: #ffc544;
+  border-radius: 2px;
+  z-index: -1;
+  transform: translateY(-5.5px);
 `;
 
 const SubmitButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
   position: absolute;
   z-index: 1;
-  top: 207px;
+  top: 190px;
   left: 50%;
   transform: translateX(-50%);
-  width: 242px;
-  height: 66px;
-  border-radius: 14px;
 
-  background: #f8d459;
+  width: 268px;
+  height: 56px;
+  border-radius: 14px;
+  background: #ffc544;
   border: none;
   box-shadow: 5.06896px 5.06896px 12.6724px rgba(144, 145, 146, 0.2);
   padding: 17px 20px 17px 20px;
+
   font-family: 'Spoqa Han Sans Neo';
   font-weight: 500;
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 22px;
   letter-spacing: -0.02em;
-  color: #222222;
+  color: #343434;
 `;
 
-const GraphBox = styled.div`
-  box-sizing: border-box;
+const WhiteGradientBox = styled.div`
   position: absolute;
-  /* display: flex;
-  justify-content: center;
-  align-items: flex-end; */
-  z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-  top: 152px;
-  width: 242px;
-  height: 146px;
-  border-radius: 14px;
-  background-color: #ffffff;
-  box-shadow: 5px 5px 12px rgba(144, 145, 146, 0.2);
-`;
-const GrapAnimationContainer = styled.div`
-  margin-top: -20px;
-`;
-
-const Grap = styled.div`
-  border-radius: 4px 4px 0 0;
-  width: 20.93px;
-  height: ${(props) => props.height};
-  background: ${(props) => props.background};
-  margin: 0 7.785px 0 7.785px;
+  top: 32px;
+  width: 312px;
+  height: 296px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 36px 36px 0px 0px;
+  overflow: hidden;
+  div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
 `;
 
-const InfoContainer = styled.div`
-  position: absolute;
-  display: grid;
-  width: 230px;
-  grid-template-columns: repeat(2, 101px);
-  grid-row-gap: 8px;
-  grid-column-gap: 28px;
-  z-index: 1;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 77px;
-`;
-
-const Info = styled.div`
-  display: flex;
-  align-items: center;
-  animation-duration: 0.75s;
-  animation-timing-function: ease-in-out;
-  animation-name: ${opacity};
+const Portfolio = styled.img`
+  width: 280px;
+  border-radius: 36px 36px 0px 0px;
+  animation-delay: 0.75s;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in;
+  animation-name: ${ScrollUp};
   animation-fill-mode: forwards;
-  h5 {
-    margin-left: 8px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: -0.02em;
-    color: #343434;
-  }
-  p {
-    margin-left: 8px;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 500;
-    font-size: 11px;
-    letter-spacing: -0.02em;
-    color: #979797;
-  }
 `;
 
-const Circle = styled.div`
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background-color: ${(props) => props.background};
+const WhiteBox = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 266px;
+  width: 312px;
+  height: 70px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 5.61%,
+    rgba(255, 255, 255, 0.660156) 41.5%,
+    #ffffff 73.83%
+  );
+  z-index: 4;
 `;
+
+// const GraphBox = styled.div`
+//   box-sizing: border-box;
+//   position: absolute;
+//   /* display: flex;
+//   justify-content: center;
+//   align-items: flex-end; */
+//   z-index: 1;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   top: 152px;
+//   width: 242px;
+//   height: 146px;
+//   border-radius: 14px;
+//   background-color: #ffffff;
+//   box-shadow: 5px 5px 12px rgba(144, 145, 146, 0.2);
+// `;
+// const GrapAnimationContainer = styled.div`
+//   margin-top: -20px;
+// `;
+
+// const Grap = styled.div`
+//   border-radius: 4px 4px 0 0;
+//   width: 20.93px;
+//   height: ${(props) => props.height};
+//   background: ${(props) => props.background};
+//   margin: 0 7.785px 0 7.785px;
+// `;
+
+// const InfoContainer = styled.div`
+//   position: absolute;
+//   display: grid;
+//   width: 230px;
+//   grid-template-columns: repeat(2, 101px);
+//   grid-row-gap: 8px;
+//   grid-column-gap: 28px;
+//   z-index: 1;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   top: 77px;
+// `;
+
+// const Info = styled.div`
+//   display: flex;
+//   align-items: center;
+//   animation-duration: 0.75s;
+//   animation-timing-function: ease-in-out;
+//   animation-name: ${opacity};
+//   animation-fill-mode: forwards;
+//   h5 {
+//     margin-left: 8px;
+//     font-family: 'Spoqa Han Sans Neo';
+//     font-weight: 500;
+//     font-size: 14px;
+//     letter-spacing: -0.02em;
+//     color: #343434;
+//   }
+//   p {
+//     margin-left: 8px;
+//     font-family: 'Spoqa Han Sans Neo';
+//     font-weight: 500;
+//     font-size: 11px;
+//     letter-spacing: -0.02em;
+//     color: #979797;
+//   }
+// `;
+
+// const Circle = styled.div`
+//   width: 11px;
+//   height: 11px;
+//   border-radius: 50%;
+//   background-color: ${(props) => props.background};
+// `;
 
 const Professionalism = () => {
   const [title, setTitle] = useState('');
   const [subtitle, setSubTitle] = useState('');
+  const [mainText, setMainText] = useState([]);
   const [isClick, setIsClick] = useState(false);
 
   useEffect(() => {
     const [pageData] = mockData.filter((page) => page.id === 4);
     setTitle(pageData.title);
     setSubTitle(pageData.subTitle);
+    setMainText(pageData.Main);
   }, []);
 
   return (
@@ -214,9 +277,12 @@ const Professionalism = () => {
           {isClick === false && (
             <>
               <InfoBox>
-                <h5>로보쌤이 제안한 포트폴리오!</h5>
-                <h3>안전추구형</h3>
-                <p>2020.03.11 투자성향기준</p>
+                <h5>{mainText.subTitle}</h5>
+                <h3>{mainText.title}</h3>
+                <div>
+                  <Yellowline></Yellowline>
+                </div>
+                <p>{mainText.text}</p>
               </InfoBox>
               <SubmitButton
                 onClick={() => {
@@ -231,7 +297,13 @@ const Professionalism = () => {
 
           {isClick === true && (
             <>
-              <InfoContainer>
+              <WhiteGradientBox>
+                <div>
+                  <Portfolio src={portfolio}></Portfolio>
+                </div>
+              </WhiteGradientBox>
+              <WhiteBox></WhiteBox>
+              {/* <InfoContainer>
                 <Info>
                   <Circle background="#D65C49"></Circle>
                   <h5>국내채권</h5>
@@ -265,15 +337,18 @@ const Professionalism = () => {
                 <Grap height="80.15px" background="#E38337"></Grap>
                 <Grap height="102.32px" background="#9DB953"></Grap>
                 <Grap height="50.51px" background="#5BBACE"></Grap> */}
-              </GraphBox>
+              {/* </GraphBox>  */}
             </>
           )}
-
-          <PhoneBackground />
+          {isClick === false && <PhoneBackground />}
         </MainImageContainer>
       </Main>
       {isClick === true && (
-        <BottomButton backLocation="/accessibility" nextLocation="/economics" />
+        <BottomButton
+          backLocation="/accessibility"
+          nextLocation="/economics"
+          delay="1.65s"
+        />
       )}
     </div>
   );
