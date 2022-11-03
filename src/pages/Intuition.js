@@ -4,10 +4,120 @@ import Header from '../components/Header';
 import PhoneBackground from '../components/PhoneBackground';
 import { mockData } from '../data/mockData';
 import { useEffect, useState } from 'react';
+import styled, { keyframes } from 'styled-components';
+import smallImg from '../utils/intuition/small-img.png';
+import bigImg from '../utils/intuition/big-img.png';
+import ToggleButton from '../components/ToggleButton';
+
+const fadeIn = keyframes`
+from {
+  opacity: 0;
+  transform: translateY(50px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+`;
+
+const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const MainImageContainer = styled.div`
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-name: ${fadeIn};
+  animation-fill-mode: forwards;
+`;
+
+const ToggleButtonbox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: absolute;
+  top: 241px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 312px;
+  height: 56px;
+  padding: 24px;
+  background: #ffffff;
+  border: 2.5px solid #ffc544;
+  box-shadow: 5.06896px 5.06896px 12.6724px rgba(144, 145, 146, 0.2);
+  border-radius: 14px;
+  z-index: 3;
+  div {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #222222;
+  }
+`;
+
+const WhiteBox = styled.div`
+  position: absolute;
+  width: 272px;
+  height: 70px;
+  top: 234px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 5.61%,
+    rgba(255, 255, 255, 0.660156) 41.5%,
+    #ffffff 73.83%
+  );
+  z-index: 1;
+`;
+
+const WhiteGradientBox = styled.div`
+  display: flex;
+  justify-content: center;
+  top: 32px;
+  width: 272px;
+  height: 296px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 36px 36px 0px 0px;
+`;
+
+const BigWhiteGradientBox = styled.div`
+  display: flex;
+  justify-content: center;
+  top: 32px;
+  width: 312px;
+  height: 296px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 36px 36px 0px 0px;
+`;
+
+const SmallPhoneImg = styled.img`
+  margin-top: 20px;
+  width: 244.1px;
+  border-radius: 36px 36px 0px 0px;
+`;
+
+const BigPhoneImg = styled.img`
+  margin-top: 20px;
+  width: 280px;
+  border-radius: 36px 36px 0px 0px;
+`;
 
 const Intuition = () => {
   const [title, setTitle] = useState('');
   const [subtitle, setSubTitle] = useState('');
+  const [clickButton, setClickButton] = useState(false);
 
   useEffect(() => {
     const [pageData] = mockData.filter((page) => page.id === 6);
@@ -25,8 +135,37 @@ const Intuition = () => {
         fifthLineColor="#F8D459"
         sixthLineColor="#F8D459"
       />
-      <Title subTitle={title} mainTitle={subtitle} />
-      <PhoneBackground />
+      <Main>
+        <Title subTitle={title} mainTitle={subtitle} />
+        <MainImageContainer>
+          {clickButton === false && (
+            <>
+              <WhiteBox></WhiteBox>
+              <WhiteGradientBox>
+                <SmallPhoneImg src={smallImg}></SmallPhoneImg>
+              </WhiteGradientBox>
+            </>
+          )}
+
+          {clickButton === true && (
+            <>
+              <WhiteBox></WhiteBox>
+              <BigWhiteGradientBox>
+                <BigPhoneImg src={bigImg}></BigPhoneImg>
+              </BigWhiteGradientBox>
+            </>
+          )}
+
+          <ToggleButtonbox>
+            <div>보던 화면 그대로, 큰 글씨로</div>
+            <ToggleButton
+              onChange={() => {
+                setClickButton(!clickButton);
+              }}
+            />
+          </ToggleButtonbox>
+        </MainImageContainer>
+      </Main>
       <BottomButton backLocation="/economics" nextLocation="/" />
     </div>
   );
