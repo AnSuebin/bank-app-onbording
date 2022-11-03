@@ -58,52 +58,40 @@ const WarningBox = styled.div`
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-  top: 62px;
-  width: 242px;
-  height: 127px;
+  top: 56px;
+  width: 268px;
+  height: 136px;
   border-radius: 14px;
   background-color: #ffffff;
   box-shadow: 5px 5px 12px rgba(144, 145, 146, 0.2);
   padding: 17px 20px;
   img {
-    width: 40px;
+    width: 44px;
   }
   p {
-    margin-top: 10px;
+    margin-top: 8px;
+    font-family: 'Spoqa Han Sans Neo';
     font-weight: 500;
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 21px;
     text-align: center;
     word-break: keep-all;
-    width: 175px;
+    width: 213px;
     letter-spacing: -0.02em;
     color: #343434;
   }
-`;
-
-const BankName = styled.div`
-  margin-left: 8px;
-  h5 {
-    font-weight: 700;
-    font-size: 11px;
-    line-height: 14px;
-  }
-  p {
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 10px;
-    letter-spacing: -0.02em;
-    color: #979797;
+  div {
+    position: relative;
   }
 `;
-
-const BankContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 32px;
-  }
+const Yellowline = styled.div`
+  width: 83px;
+  height: 3px;
+  background: #ffc544;
+  border-radius: 2px;
+  z-index: -1;
+  position: absolute;
+  transform: translate(-5px, -6px);
 `;
 
 const DeleteBox = styled.div`
@@ -113,25 +101,75 @@ const DeleteBox = styled.div`
   align-items: center;
   position: absolute;
   z-index: 1;
-  top: 207px;
+  top: 204px;
   left: 50%;
   transform: translateX(-50%);
-  width: 242px;
-  height: 66px;
+  width: 268px;
+  height: 80px;
   border-radius: 14px;
   background: #ffffff;
-  border: 2.53448px solid #ffc544;
+  border: 2.5px solid #ffc544;
   box-shadow: 5.06896px 5.06896px 12.6724px rgba(144, 145, 146, 0.2);
-  padding: 17px 20px 17px 20px;
+  padding: 20px;
   button {
-    width: 38px;
-    height: 24px;
-    font-weight: 700;
-    font-size: 10px;
+    width: 56px;
+    height: 32px;
     background: #ffc544;
     border: none;
     border-radius: 4px;
     color: #222222;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+  }
+`;
+
+const BankContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 40px;
+  }
+`;
+
+const BankName = styled.div`
+  margin-left: 8px;
+  position: relative;
+  h5 {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #222222;
+    span {
+      position: absolute;
+      margin-left: 10px;
+      font-family: 'Spoqa Han Sans Neo';
+      font-weight: 500;
+      font-size: 11px;
+      color: #f43e3e;
+    }
+    div {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #f43e3e;
+      display: inline-block;
+      border-radius: 50%;
+      transform: translate(3.5px);
+    }
+  }
+  p {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: -0.02em;
+
+    color: #8f989c;
   }
 `;
 
@@ -144,14 +182,14 @@ const SuccessContainer = styled.div`
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
-  top: 107px;
+  top: 104px;
   div:nth-child(2) {
-    margin-top: 7px;
+    margin-top: 8px;
     width: 120px;
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 21px;
     text-align: center;
     letter-spacing: -0.02em;
     color: #222222;
@@ -187,13 +225,19 @@ const Safety = () => {
               <WarningBox>
                 <img src={WaringIcon} alt="악성앱 탐지 아이콘" />
                 <p>{text}</p>
+                <div>
+                  <Yellowline></Yellowline>
+                </div>
               </WarningBox>
               <DeleteBox>
                 <BankContainer>
                   <img src={bankIcon} alt="kb 국민은행 app 아이콘" />
                   <BankName>
-                    <h5>KB 국민은행</h5>
-                    <p>caklsdhrslkhkg4</p>
+                    <h5>
+                      KB 국민은행<span>!</span>
+                      <div></div>
+                    </h5>
+                    <p>IP:Rag26w_sh4</p>
                   </BankName>
                 </BankContainer>
                 <button

@@ -12,11 +12,15 @@ to {
 `;
 
 const Phone = styled.div`
-  width: 294px;
-  height: 290px;
-  background: linear-gradient(180deg, #e9ecef 0%, rgba(233, 236, 239, 0) 100%);
-  border-radius: 36.75px 36.75px 0px 0px;
-  margin: 36px auto;
+  width: 312px;
+  height: 296px;
+  background: linear-gradient(
+    180deg,
+    #e9ecef 66.39%,
+    rgba(233, 236, 239, 0) 100%
+  );
+  border-radius: 36px 36px 0px 0px;
+  margin: 32px auto;
   z-index: -1;
   animation-duration: 0.75s;
   animation-timing-function: ease-in-out;

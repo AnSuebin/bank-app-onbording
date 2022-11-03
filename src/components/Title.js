@@ -14,8 +14,9 @@ to {
 const SubTitle = styled.div`
   font-family: 'Spoqa Han Sans Neo';
   color: #1355b4;
-  font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 24px;
   animation-duration: 0.55s;
   animation-delay: 0.5s;
   animation-timing-function: ease-in-out;
@@ -26,10 +27,11 @@ const SubTitle = styled.div`
 const MainTitle = styled.div`
   font-family: 'Spoqa Han Sans Neo';
   font-style: normal;
-  font-weight: 700;
-  margin-top: 14px;
+  margin-top: 8px;
   color: #222222;
+  font-weight: 700;
   font-size: 26px;
+  line-height: 36px;
   animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
   animation-name: ${fadeIn};
