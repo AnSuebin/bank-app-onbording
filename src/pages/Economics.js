@@ -13,6 +13,7 @@ import eventDetail from '../utils/economics/event.png';
 // 로티
 import Lottie from 'lottie-react';
 import coin from '../assets/lottie/coin.json';
+import click from '../assets/lottie/click.json';
 
 const fadeIn = keyframes`
 from {
@@ -33,15 +34,6 @@ from {
 to {
   opacity: 1;
   transform: translate(-50%,0);
-}
-`;
-
-const opacity = keyframes`
-from {
-  opacity: 0;
-}
-to {
-  opacity: 1;
 }
 `;
 
@@ -67,7 +59,7 @@ const WhiteGradientBox = styled.div`
   width: 312px;
   height: 76px;
   left: 50%;
-  top: 266px;
+  top: 262px;
   z-index: 3;
   transform: translateX(-50%);
   background: linear-gradient(
@@ -78,16 +70,16 @@ const WhiteGradientBox = styled.div`
   );
 `;
 
-// const WhiteBox = styled.div`
-//   position: absolute;
-//   width: 294px;
-//   height: 250px;
-//   left: 50%;
-//   top: 316px;
-//   transform: translateX(-50%);
-//   background: #ffffff;
-//   z-index: 3;
-// `;
+const WhiteBlindBox = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 328px;
+  width: 360px;
+  height: 70px;
+  background: #ffffff;
+  z-index: 1;
+`;
 
 const LogoImg = styled.img`
   width: 104px;
@@ -167,6 +159,15 @@ const EventBox = styled.div`
   }
 `;
 
+const ClickIcon = styled.div`
+  position: absolute;
+  height: 10px;
+  left: 50%;
+  top: 260px;
+  z-index: 3;
+  transform: translateX(65px);
+`;
+
 const SmallPhone = styled.div`
   position: absolute;
   z-index: 1;
@@ -209,9 +210,9 @@ const EventDetailWrapper = styled.div`
   width: 312px;
   height: 296px;
   background: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e6e7ea;
+  box-shadow: 0px 0px 40px rgba(51, 53, 56, 0.09);
   border-radius: 36px 36px 0px 0px;
-
   div {
     overflow: hidden;
     div:nth-child(1) {
@@ -249,7 +250,8 @@ const Economics = () => {
       <Main>
         <Title subTitle={title} mainTitle={subtitle} />
         <MainImageContainer>
-          <WhiteGradientBox></WhiteGradientBox>
+          <WhiteGradientBox />
+          <WhiteBlindBox />
           {/* <WhiteBox></WhiteBox> */}
           {isClick === false && (
             <>
@@ -267,6 +269,16 @@ const Economics = () => {
                   이벤트 확인해보기
                 </button>
               </EventBox>
+              <ClickIcon>
+                <Lottie
+                  animationData={click}
+                  loop={true}
+                  style={{ width: 34.88 }}
+                  onClick={() => {
+                    setIsClick(true);
+                  }}
+                />
+              </ClickIcon>
               <SmallPhone></SmallPhone>
               <PhoneHeader>
                 <LogoImg src={logo} alt="국민은행 로고" />
@@ -283,11 +295,6 @@ const Economics = () => {
             </EventDetailWrapper>
           )}
         </MainImageContainer>
-        {/* {isClick === false && (
-          <>
-            <PhoneBackground />
-          </>
-        )} */}
       </Main>
       {isClick === true && (
         <BottomButton
