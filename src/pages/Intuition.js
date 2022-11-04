@@ -47,20 +47,21 @@ const ToggleButtonbox = styled.div`
   left: 50%;
   transform: translateX(-50%);
   width: 312px;
-  height: 56px;
-  padding: 24px;
+  height: 59px;
+  padding-left: 26px;
+  padding-right: 26px;
   background: #ffffff;
-  border: 2.5px solid #ffc544;
-  box-shadow: 5.06896px 5.06896px 12.6724px rgba(144, 145, 146, 0.2);
-  border-radius: 14px;
+  box-shadow: 0px 5.03756px 21.4096px rgba(0, 0, 0, 0.2);
+  border-radius: 12.6793px;
   z-index: 3;
   div {
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 19px;
+    font-family: 'SpoqaHanSans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
     letter-spacing: -0.02em;
-    color: #222222;
+    color: #424242;
   }
 `;
 
@@ -87,7 +88,8 @@ const WhiteGradientBox = styled.div`
   width: 272px;
   height: 296px;
   background: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e6e7ea;
+  box-shadow: 0px 0px 40px rgba(51, 53, 56, 0.09);
   border-radius: 36px 36px 0px 0px;
 `;
 
@@ -95,10 +97,11 @@ const BigWhiteGradientBox = styled.div`
   display: flex;
   justify-content: center;
   top: 32px;
-  width: 312px;
+  width: 300px;
   height: 296px;
   background: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e6e7ea;
+  box-shadow: 0px 0px 40px rgba(51, 53, 56, 0.09);
   border-radius: 36px 36px 0px 0px;
 `;
 
@@ -109,8 +112,9 @@ const SmallPhoneImg = styled.img`
 `;
 
 const BigPhoneImg = styled.img`
-  margin-top: 20px;
-  width: 280px;
+  margin-top: 16px;
+  width: 264px;
+  height: 276px;
   border-radius: 36px 36px 0px 0px;
 `;
 

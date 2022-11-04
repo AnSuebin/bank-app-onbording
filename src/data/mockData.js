@@ -29,7 +29,7 @@ export const mockData = [
     title: '맞춤형 금융 비서',
     subTitle: '똑똑하게 관리하세요',
     Main: {
-      subTitle: '로보 쌤이 제안한 포트폴리오!',
+      subTitle: '로보 쌤이 제안한 포트폴리오',
       title: '안정추구형',
       text: '(2020.03.11 투자성향기준)',
     },

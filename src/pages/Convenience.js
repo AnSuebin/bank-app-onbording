@@ -158,7 +158,7 @@ const Convenience = () => {
           <Facetalk src={facetalk} />
           <ConvenienceConatiner>
             {conversation.map((conversation) => (
-              <Conversation width={`${conversation.length * 11.4}px`}>
+              <Conversation width={`${conversation.length * 11.5}px`}>
                 {conversation}
               </Conversation>
             ))}
