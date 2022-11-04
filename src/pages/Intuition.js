@@ -1,7 +1,6 @@
 import BottomButton from '../components/BottomButton';
 import Title from '../components/Title';
 import Header from '../components/Header';
-import PhoneBackground from '../components/PhoneBackground';
 import { mockData } from '../data/mockData';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';

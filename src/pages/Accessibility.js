@@ -255,7 +255,7 @@ const Accessibility = () => {
             <>
               <TurnOverContainer>
                 <div>
-                  <img src={Recommendation} />
+                  <img src={Recommendation} alt="연금 추천 상품" />
                 </div>
               </TurnOverContainer>
               <WhiteBox></WhiteBox>
