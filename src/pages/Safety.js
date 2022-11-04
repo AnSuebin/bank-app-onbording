@@ -10,6 +10,7 @@ import bankIcon from '../utils/safety/bank-icon.png';
 // 로티
 import Lottie from 'lottie-react';
 import complete from '../assets/lottie/complete.json';
+import click from '../assets/lottie/click.json';
 
 const fadeIn = keyframes`
 from {
@@ -85,17 +86,8 @@ const WarningBox = styled.div`
   }
 `;
 
-const Yellowline = styled.div`
-  width: 83px;
-  height: 3px;
-  background: #ffc544;
-  border-radius: 2px;
-  z-index: -1;
-  position: absolute;
-  transform: translate(-5px, -6px);
-`;
-
 const DeleteBox = styled.div`
+  position: relative;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -126,6 +118,15 @@ const DeleteBox = styled.div`
   }
 `;
 
+const ClickIcon = styled.div`
+  position: absolute;
+  height: 10px;
+  left: 50%;
+  top: 235px;
+  z-index: 3;
+  transform: translateX(50px);
+`;
+
 const BankContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -147,7 +148,7 @@ const BankName = styled.div`
     color: #222222;
     span {
       position: absolute;
-      margin-left: 10px;
+      margin-left: 10.5px;
       font-family: 'Spoqa Han Sans Neo';
       font-weight: 500;
       font-size: 11px;
@@ -160,7 +161,7 @@ const BankName = styled.div`
       border: 1px solid #f43e3e;
       display: inline-block;
       border-radius: 50%;
-      transform: translate(3.5px);
+      transform: translate(4px, 0.5px);
     }
   }
   p {
@@ -226,9 +227,6 @@ const Safety = () => {
               <WarningBox>
                 <img src={WaringIcon} alt="악성앱 탐지 아이콘" />
                 <p>{text}</p>
-                <div>
-                  <Yellowline></Yellowline>
-                </div>
               </WarningBox>
               <DeleteBox>
                 <BankContainer>
@@ -249,13 +247,23 @@ const Safety = () => {
                   삭제
                 </button>
               </DeleteBox>
+              <ClickIcon>
+                <Lottie
+                  animationData={click}
+                  loop={true}
+                  style={{ width: 34.88 }}
+                  onClick={() => {
+                    setIsClick(true);
+                  }}
+                />
+              </ClickIcon>
             </>
           )}
           {isClick === true && (
             <SuccessContainer>
               <Lottie
                 animationData={complete}
-                loop="false"
+                loop={false}
                 style={{ height: 84 }}
               />
               <div>악성앱을 성공적으로 삭제했습니다!</div>
