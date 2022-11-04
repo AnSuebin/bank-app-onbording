@@ -30,7 +30,7 @@ const CloseButton = () => {
     <CloseContainer>
       <Close
         onClick={() => {
-          navigate(-1);
+          navigate('/safety');
         }}
       >
         건너뛰기
