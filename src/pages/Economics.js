@@ -296,13 +296,13 @@ const Economics = () => {
           )}
         </MainImageContainer>
       </Main>
-      {isClick === true && (
-        <BottomButton
-          backLocation="/professionalism"
-          nextLocation="/intuition"
-          delay="0.75s"
-        />
-      )}
+      {/* {isClick === true && ( */}
+      <BottomButton
+        backLocation="/professionalism"
+        nextLocation="/intuition"
+        delay="0.75s"
+      />
+      {/* )} */}
     </div>
   );
 };

@@ -110,6 +110,11 @@ const ConversationContainer = styled.div`
     letter-spacing: -0.02em;
     color: #1664d3;
     margin-bottom: 6px;
+    display: 0.5s;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-in-out;
+    animation-name: ${fadeIn};
+    animation-fill-mode: backwards;
   }
   p {
     font-family: 'Spoqa Han Sans Neo';
@@ -118,6 +123,11 @@ const ConversationContainer = styled.div`
     line-height: 21px;
     letter-spacing: -0.02em;
     color: #332233;
+    display: 0.7s;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-name: ${fadeIn};
+    animation-fill-mode: backwards;
   }
 `;
 
@@ -190,7 +200,7 @@ const Accessibility = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsTimeout(true);
-    }, 2500);
+    }, 2750);
     return () => {
       clearTimeout(timeout);
     };
@@ -199,7 +209,7 @@ const Accessibility = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setTurnOver(true);
-    }, 8300);
+    }, 8650);
     return () => {
       clearTimeout(timeout);
     };
@@ -254,11 +264,12 @@ const Accessibility = () => {
           )}
         </MainImageContainer>
       </Main>
-
-      <BottomButton
-        backLocation="/convenience"
-        nextLocation="/professionalism"
-      />
+      {turnOver === true && (
+        <BottomButton
+          backLocation="/convenience"
+          nextLocation="/professionalism"
+        />
+      )}
     </div>
   );
 };

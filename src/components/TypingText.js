@@ -18,7 +18,7 @@ const TypingText = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsTypingTime(true);
-    }, 1700);
+    }, 1600);
     return () => {
       clearTimeout(timeout);
     };

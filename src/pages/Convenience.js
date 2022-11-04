@@ -1,7 +1,6 @@
 import BottomButton from '../components/BottomButton';
 import Title from '../components/Title';
 import Header from '../components/Header';
-import PhoneBackground from '../components/PhoneBackground';
 import { mockData } from '../data/mockData';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
@@ -92,7 +91,6 @@ const ConvenienceConatiner = styled.div`
 
 const Conversation = styled.div`
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   padding-left: 16px;
   padding-right: 16px;
@@ -168,7 +166,7 @@ const Convenience = () => {
       <BottomButton
         backLocation="/safety"
         nextLocation="/accessibility"
-        delay="5s"
+        delay="4.7s"
       />
     </>
   );
