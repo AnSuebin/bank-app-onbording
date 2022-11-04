@@ -251,13 +251,13 @@ const Professionalism = () => {
           <WhiteBlindBox></WhiteBlindBox>
         </MainImageContainer>
       </Main>
-      {isClick === true && (
-        <BottomButton
-          backLocation="/accessibility"
-          nextLocation="/economics"
-          delay="1.65s"
-        />
-      )}
+      {/* {isClick === true && ( */}
+      <BottomButton
+        backLocation="/accessibility"
+        nextLocation="/economics"
+        delay="1.65s"
+      />
+      {/* )} */}
     </div>
   );
 };

@@ -8,6 +8,9 @@ import styled, { keyframes } from 'styled-components';
 import smallImg from '../utils/intuition/small-img.png';
 import bigImg from '../utils/intuition/big-img.png';
 import ToggleButton from '../components/ToggleButton';
+// 로티
+import Lottie from 'lottie-react';
+import click from '../assets/lottie/click.json';
 
 const fadeIn = keyframes`
 from {
@@ -63,6 +66,15 @@ const ToggleButtonbox = styled.div`
     letter-spacing: -0.02em;
     color: #424242;
   }
+`;
+
+const ClickIcon = styled.div`
+  position: absolute;
+  height: 10px;
+  left: 50%;
+  top: 275px;
+  z-index: 4;
+  transform: translateX(78px);
 `;
 
 const WhiteBox = styled.div`
@@ -148,6 +160,13 @@ const Intuition = () => {
               <WhiteGradientBox>
                 <SmallPhoneImg src={smallImg}></SmallPhoneImg>
               </WhiteGradientBox>
+              <ClickIcon>
+                <Lottie
+                  animationData={click}
+                  loop={true}
+                  style={{ width: 34.88 }}
+                />
+              </ClickIcon>
             </>
           )}
 
@@ -170,7 +189,9 @@ const Intuition = () => {
           </ToggleButtonbox>
         </MainImageContainer>
       </Main>
-      <BottomButton backLocation="/economics" nextLocation="/" />
+      {clickButton === true && (
+        <BottomButton backLocation="/economics" nextLocation="/" />
+      )}
     </div>
   );
 };
