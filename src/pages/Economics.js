@@ -1,7 +1,6 @@
 import BottomButton from '../components/BottomButton';
 import Title from '../components/Title';
 import Header from '../components/Header';
-import PhoneBackground from '../components/PhoneBackground';
 import { mockData } from '../data/mockData';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
@@ -260,7 +259,7 @@ const Economics = () => {
                 <h2>
                   <span>최고 연 6%</span>적금 가입
                 </h2>
-                <img src={point}></img>
+                <img src={point} alt="클릭"></img>
                 <button
                   onClick={() => {
                     setIsClick(true);
@@ -290,19 +289,19 @@ const Economics = () => {
             <EventDetailWrapper>
               <div>
                 <Lottie animationData={coin} loop="false" />
-                <img src={eventDetail} />
+                <img src={eventDetail} alt="적금 이벤트" />
               </div>
             </EventDetailWrapper>
           )}
         </MainImageContainer>
       </Main>
-      {/* {isClick === true && ( */}
-      <BottomButton
-        backLocation="/professionalism"
-        nextLocation="/intuition"
-        delay="0.75s"
-      />
-      {/* )} */}
+      {isClick === true && (
+        <BottomButton
+          backLocation="/professionalism"
+          nextLocation="/intuition"
+          delay="0.75s"
+        />
+      )}
     </div>
   );
 };
