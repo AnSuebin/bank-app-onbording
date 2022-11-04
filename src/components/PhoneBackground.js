@@ -14,11 +14,8 @@ to {
 const Phone = styled.div`
   width: 312px;
   height: 296px;
-  background: linear-gradient(
-    180deg,
-    #e9ecef 66.39%,
-    rgba(233, 236, 239, 0) 100%
-  );
+  background: linear-gradient(180deg, #ecf0f5 0%, rgba(255, 255, 255, 0) 100%);
+
   border-radius: 36px 36px 0px 0px;
   margin: 32px auto;
   z-index: -1;
