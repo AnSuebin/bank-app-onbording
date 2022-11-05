@@ -5,6 +5,7 @@ export const mockData = [
     title: '금융 사기 감지',
     subTitle: '안심하고 거래하세요',
     text: '제 3자가 임의로 설치한 것으로 의심되는 악성앱이 탐지되었습니다.',
+    success: '악성앱을 성공적으로 삭제했습니다!',
   },
   {
     id: 2,
