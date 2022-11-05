@@ -2,22 +2,21 @@
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 // 컴포넌트
-import BottomButton from '../../components/BottomButton';
-import Title from '../../components/Title';
 import Header from '../../components/Header';
-import PhoneBackground from '../../components/PhoneBackground';
+import Title from '../../components/Title';
 import WarningBox from './components/WarningBox';
 import DeleteBox from './components/DeleteBox';
 import Click from '../../components/Click';
 import Success from './components/Success';
+import PhoneBackground from '../../components/PhoneBackground';
+import BottomButton from '../../components/BottomButton';
 // 데이터
 import { mockData } from '../../data/mockData';
 
-// 애니메이션
+//-- 애니메이션 --//
 const fadeIn = keyframes`
 from {
   opacity: 0;
-  transform: translateY(50px);
 }
 to {
   opacity: 1;
@@ -25,6 +24,7 @@ to {
 }
 `;
 
+//-- 스타일 --//
 const Main = styled.div`
   display: flex;
   flex-direction: column;
