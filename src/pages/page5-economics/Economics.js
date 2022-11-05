@@ -1,18 +1,18 @@
-import BottomButton from '../components/BottomButton';
-import Title from '../components/Title';
-import Header from '../components/Header';
-import { mockData } from '../data/mockData';
+import BottomButton from '../../components/BottomButton';
+import Title from '../../components/Title';
+import Header from '../../components/Header';
+import { mockData } from '../../data/mockData';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import logo from '../utils/economics/logo-icon.png';
-import menu from '../utils/economics/menu-icon.png';
-import point from '../utils/economics/point-img.png';
-import eventDetail from '../utils/economics/event.png';
+import logo from '../../utils/economics/logo-icon.png';
+import menu from '../../utils/economics/menu-icon.png';
+import point from '../../utils/economics/point-img.png';
+import eventDetail from '../../utils/economics/event.png';
 
 // 로티
 import Lottie from 'lottie-react';
-import coin from '../assets/lottie/coin.json';
-import click from '../assets/lottie/click.json';
+import coin from '../../assets/lottie/coin.json';
+import click from '../../assets/lottie/click.json';
 
 const fadeIn = keyframes`
 from {

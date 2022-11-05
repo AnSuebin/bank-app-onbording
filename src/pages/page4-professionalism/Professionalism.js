@@ -1,16 +1,16 @@
-import BottomButton from '../components/BottomButton';
-import Title from '../components/Title';
-import Header from '../components/Header';
+import BottomButton from '../../components/BottomButton';
+import Title from '../../components/Title';
+import Header from '../../components/Header';
 
-import { mockData } from '../data/mockData';
+import { mockData } from '../../data/mockData';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import portfolio from '../utils/professionalism/portfolio.png';
+import portfolio from '../../utils/professionalism/portfolio.png';
 
-import rectangle from '../utils/professionalism/rectangle.png';
+import rectangle from '../../utils/professionalism/rectangle.png';
 
 import Lottie from 'lottie-react';
-import click from '../assets/lottie/click.json';
+import click from '../../assets/lottie/click.json';
 
 const fadeIn = keyframes`
 from {

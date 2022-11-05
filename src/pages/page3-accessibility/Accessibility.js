@@ -1,16 +1,16 @@
-import BottomButton from '../components/BottomButton';
-import Title from '../components/Title';
-import Header from '../components/Header';
-import PhoneBackground from '../components/PhoneBackground';
-import { mockData } from '../data/mockData';
+import BottomButton from '../../components/BottomButton';
+import Title from '../../components/Title';
+import Header from '../../components/Header';
+import PhoneBackground from '../../components/PhoneBackground';
+import { mockData } from '../../data/mockData';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import TypingText from '../components/TypingText';
-import Recommendation from '../utils/accessibility/recommendation.png';
+import TypingText from '../../components/TypingText';
+import Recommendation from '../../utils/accessibility/recommendation.png';
 
 import Lottie from 'lottie-react';
-import voice from '../assets/lottie/voice.json';
+import voice from '../../assets/lottie/voice.json';
 
 const fadeIn = keyframes`
 from {

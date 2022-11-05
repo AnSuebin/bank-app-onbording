@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Safety from './pages/Safety';
-import Convenience from './pages/Convenience';
-import Accessibility from './pages/Accessibility';
-import Professionalism from './pages/Professionalism';
-import Economics from './pages/Economics';
-import Intuition from './pages/Intuition';
+import Safety from './pages/page1-safety/Safety';
+import Convenience from './pages/page2-convenience/Convenience';
+import Accessibility from './pages/page3-accessibility/Accessibility';
+import Professionalism from './pages/page4-professionalism/Professionalism';
+import Economics from './pages/page5-economics/Economics';
+import Intuition from './pages/page6-intuition/Intuition';
 import Home from './pages/Home';
 
 function App() {
