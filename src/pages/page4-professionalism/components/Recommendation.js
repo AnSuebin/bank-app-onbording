@@ -16,7 +16,7 @@ const InfoBox = styled.div`
   z-index: 1;
   h5 {
     margin-top: 65.01px;
-    width: 195px;
+    width: 200px;
     font-family: 'Regular';
     font-size: 17px;
     line-height: 20px;
