@@ -1,10 +1,23 @@
+// CSS
 import styled from 'styled-components';
-
+// 컴포넌트
 import CloseButton from './CloseButton';
 import NavigationBar from './NavigationBar';
 
 const HeaderContainer = styled.div`
-  margin: 18px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 18px;
+  margin-bottom: 20px;
+`;
+
+const CloseButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 8px;
+  width: 320px;
 `;
 
 const Header = ({
@@ -25,7 +38,9 @@ const Header = ({
         fifthLineColor={fifthLineColor}
         sixthLineColor={sixthLineColor}
       />
-      <CloseButton />
+      <CloseButtonContainer>
+        <CloseButton />
+      </CloseButtonContainer>
     </HeaderContainer>
   );
 };

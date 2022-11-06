@@ -1,4 +1,4 @@
-// 훅
+// CSS
 import styled from 'styled-components';
 // 로티 에니메이션
 import Lottie from 'lottie-react';
@@ -9,8 +9,8 @@ const ClickIcon = styled.div`
   height: 10px;
   left: 50%;
   top: ${(props) => props.top};
-  z-index: 3;
   transform: ${(props) => props.transform};
+  z-index: 4;
 `;
 
 const Click = ({ onClick, top, transform }) => {

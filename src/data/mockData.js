@@ -35,11 +35,17 @@ export const mockData = [
     page: 5,
     title: '금융 혜택 알림',
     subTitle: '알뜰하게 챙겨드려요',
+    Main: {
+      subTitle: 'KB스타페이적금 가입 이벤트',
+      title1: '최고 연 6%',
+      title2: '적금 가입',
+    },
   },
   {
     id: 6,
     page: 6,
     title: '큰글씨 화면',
     subTitle: '편하게 보세요',
+    Main: '보던 화면 그대로, 큰 글씨로',
   },
 ];

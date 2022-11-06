@@ -1,4 +1,6 @@
+// 훅
 import React, { useState, useEffect } from 'react';
+// CSS
 import styled from 'styled-components';
 
 const Typing = styled.p`
@@ -15,6 +17,7 @@ const TypingText = () => {
   const [Text, setText] = useState('');
   const [Count, setCount] = useState(0);
 
+  // 타이핑 시작 타이밍
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsTypingTime(true);
@@ -24,6 +27,7 @@ const TypingText = () => {
     };
   }, [isTypingTime]);
 
+  // 타이핑 속도
   useEffect(() => {
     if (isTypingTime) {
       const interval = setInterval(() => {

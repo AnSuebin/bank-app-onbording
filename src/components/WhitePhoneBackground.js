@@ -1,4 +1,4 @@
-// 훅
+// CSS
 import styled from 'styled-components';
 
 const WhitePhone = styled.div`

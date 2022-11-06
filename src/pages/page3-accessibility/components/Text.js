@@ -1,3 +1,4 @@
+// CSS
 import styled from 'styled-components';
 
 const TextContainer = styled.div`

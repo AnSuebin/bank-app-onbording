@@ -1,5 +1,6 @@
 // 훅
 import { useEffect, useState } from 'react';
+// CSS
 import styled, { keyframes } from 'styled-components';
 // 컴포넌트
 import Header from '../../components/Header';
@@ -63,13 +64,11 @@ const Facetalk = styled.img`
 const Convenience = () => {
   const [title, setTitle] = useState('');
   const [subtitle, setSubTitle] = useState('');
-  const [conversation, setConversation] = useState([]);
 
   useEffect(() => {
     const [pageData] = mockData.filter((page) => page.id === 2);
     setTitle(pageData.title);
     setSubTitle(pageData.subTitle);
-    setConversation(pageData.text);
   }, []);
 
   return (

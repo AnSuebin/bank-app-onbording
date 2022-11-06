@@ -1,41 +1,44 @@
+// 훅
 import React from 'react';
+// CSS
 import styled from 'styled-components';
-import { useState } from 'react';
 
-const ReactSwitchButton = styled.span`
+const SwitchButton = styled.span`
   content: '';
   position: absolute;
   left: 2px;
+
   width: 24px;
   height: 24px;
   border-radius: 45px;
-  transition: 0.2s;
   background: #888e98;
   box-shadow: 5px 5px 12px rgba(144, 145, 146, 0.2);
+
+  transition: 0.2s;
 `;
-const ReactSwitchLabel = styled.label`
+
+const SwitchLabel = styled.label`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   width: 48px;
   height: 16px;
   background: #eff1f3;
   border-radius: 100px;
-  position: relative;
+
   transition: background-color 0.2s;
   cursor: pointer;
-  &:active ${ReactSwitchButton} {
-    width: 40px;
-  }
 `;
 
-const ReactSwitchCheckbox = styled.input`
+const SwitchCheckbox = styled.input`
   height: 0;
   width: 0;
   visibility: hidden;
-  &:checked + ${ReactSwitchLabel} {
+  &:checked + ${SwitchLabel} {
     background: #fae585;
-    ${ReactSwitchButton} {
+    ${SwitchButton} {
       left: calc(100%);
       transform: translateX(-100%);
       background-color: #f5bf41;
@@ -43,19 +46,13 @@ const ReactSwitchCheckbox = styled.input`
   }
 `;
 
-const ToggleButton = ({ onChange }) => {
-  //   const [value, setValue] = useState(false);
+const ToggleButton = ({ onClick }) => {
   return (
     <>
-      <ReactSwitchCheckbox
-        id={`react-switch-new`}
-        type="checkbox"
-        // checked={value}
-        onChange={onChange}
-      />
-      <ReactSwitchLabel htmlFor={`react-switch-new`}>
-        <ReactSwitchButton />
-      </ReactSwitchLabel>
+      <SwitchCheckbox id={`switch-new`} type="checkbox" onChange={onClick} />
+      <SwitchLabel htmlFor={`switch-new`}>
+        <SwitchButton />
+      </SwitchLabel>
     </>
   );
 };

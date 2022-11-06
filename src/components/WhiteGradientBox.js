@@ -1,9 +1,8 @@
-// 훅
+// CSS
 import styled from 'styled-components';
 
 const WhiteBox = styled.div`
   position: absolute;
-
   top: 190px;
   left: 50%;
   transform: translateX(-50%);
