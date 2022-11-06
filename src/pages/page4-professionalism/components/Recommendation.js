@@ -10,7 +10,6 @@ const InfoBox = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 191px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -18,7 +17,6 @@ const InfoBox = styled.div`
   h5 {
     margin-top: 65.01px;
     font-family: 'Regular';
-    font-weight: 400;
     font-size: 17px;
     line-height: 20px;
     text-align: center;

@@ -85,7 +85,6 @@ const RecommendationContainer = styled.div`
   margin-top: 283px;
   h5 {
     font-family: 'Bold';
-    font-weight: 700;
     font-size: 21px;
     line-height: 26px;
     letter-spacing: -0.02em;
@@ -99,7 +98,6 @@ const RecommendationContainer = styled.div`
   }
   p {
     font-family: 'Regular';
-    font-weight: 400;
     font-size: 17px;
     line-height: 21px;
     letter-spacing: -0.02em;

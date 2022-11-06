@@ -8,7 +8,6 @@ const TextContainer = styled.div`
   div {
     margin-bottom: 13px;
     font-family: 'Regular';
-    font-weight: 400;
     font-size: 17px;
     line-height: 21px;
     letter-spacing: -0.02em;

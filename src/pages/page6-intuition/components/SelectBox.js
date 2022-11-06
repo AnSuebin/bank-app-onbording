@@ -26,8 +26,6 @@ const ToggleButtonbox = styled.div`
   div {
     margin-top: 3px;
     font-family: 'Regular';
-    font-style: normal;
-    font-weight: 400;
     font-size: 17px;
     line-height: 23px;
     letter-spacing: -0.02em;

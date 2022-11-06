@@ -29,10 +29,9 @@ const SuccessContainer = styled.div`
   z-index: 1;
   div:nth-child(2) {
     margin-top: 8px;
-    width: 120px;
+    width: 128px;
 
     font-family: 'Medium';
-    font-weight: 500;
     font-size: 15px;
     line-height: 21px;
     text-align: center;

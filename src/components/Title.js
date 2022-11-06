@@ -17,7 +17,6 @@ to {
 const SubTitle = styled.div`
   font-family: 'Medium';
   color: #1355b4;
-  font-weight: 500;
   font-size: 19px;
   line-height: 24px;
 
@@ -31,8 +30,6 @@ const SubTitle = styled.div`
 const MainTitle = styled.div`
   margin-top: 8px;
   font-family: 'Bold';
-  font-weight: 700;
-  font-weight: 700;
   font-size: 26px;
   line-height: 36px;
   color: #222222;
