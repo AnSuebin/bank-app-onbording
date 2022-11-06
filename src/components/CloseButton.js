@@ -10,9 +10,7 @@ const Close = styled.button`
   color: #222222;
   cursor: pointer;
   padding: 10px;
-  font-family: 'SpoqaHanSans';
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Regular';
   font-size: 13px;
   color: #6e767e;
 `;

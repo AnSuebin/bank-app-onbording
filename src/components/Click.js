@@ -8,18 +8,18 @@ const ClickIcon = styled.div`
   position: absolute;
   height: 10px;
   left: 50%;
-  top: 235px;
+  top: ${(props) => props.top};
   z-index: 3;
-  transform: translateX(50px);
+  transform: ${(props) => props.transform};
 `;
 
-const Click = ({ loop, onClick }) => {
+const Click = ({ onClick, top, transform }) => {
   return (
     <>
-      <ClickIcon>
+      <ClickIcon top={top} transform={transform}>
         <Lottie
           animationData={click}
-          loop={loop}
+          loop={true}
           style={{ width: 34.88 }}
           onClick={onClick}
         />
