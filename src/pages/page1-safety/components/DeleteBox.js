@@ -34,7 +34,6 @@ const DeleteContainer = styled.div`
     border-radius: 4px;
 
     font-family: 'Medium';
-    font-weight: 500;
     font-size: 13px;
     line-height: 16px;
   }
@@ -54,7 +53,6 @@ const BankName = styled.div`
   margin-left: 8px;
   h5 {
     font-family: 'Medium';
-    font-weight: 500;
     font-size: 15px;
     line-height: 19px;
     letter-spacing: -0.02em;
@@ -68,7 +66,6 @@ const BankName = styled.div`
   }
   p {
     font-family: 'Medium';
-    font-weight: 500;
     font-size: 11px;
     line-height: 14px;
     letter-spacing: -0.02em;

@@ -31,7 +31,6 @@ const Warning = styled.div`
   p {
     margin-top: 8px;
     font-family: 'Medium';
-    font-weight: 500;
     font-size: 15px;
     line-height: 21px;
     text-align: center;
@@ -41,7 +40,6 @@ const Warning = styled.div`
     color: #343434;
     span {
       font-family: 'Bold';
-      font-weight: 700;
     }
   }
 `;

@@ -23,7 +23,6 @@ const Button = styled.button`
   border-radius: 9px;
 
   font-family: 'Regular';
-  font-weight: 400;
   font-size: 17px;
   line-height: 22px;
   letter-spacing: -0.02em;

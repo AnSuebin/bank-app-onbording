@@ -41,7 +41,6 @@ const Event = styled.div`
   p {
     margin-left: 32px;
     font-family: 'Medium';
-    font-weight: 500;
     font-size: 15px;
     line-height: 19px;
     letter-spacing: -0.02em;
@@ -50,10 +49,9 @@ const Event = styled.div`
   h2 {
     margin-top: 12px;
     margin-left: 32px;
-    width: 100px;
+    width: 106px;
 
     font-family: 'Medium';
-    font-weight: 500;
     font-size: 21px;
     letter-spacing: -0.02em;
     color: #222222;
@@ -81,7 +79,6 @@ const Event = styled.div`
     border-radius: 14px;
 
     font-family: 'Medium';
-    font-weight: 500;
     font-size: 17px;
     line-height: 22px;
     letter-spacing: -0.02em;

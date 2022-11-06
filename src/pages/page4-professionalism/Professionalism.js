@@ -82,8 +82,8 @@ const Portfolio = styled.img`
   width: 280px;
   border-radius: 36px 36px 0px 0px;
 
-  animation-delay: 0.75s;
-  animation-duration: 0.9s;
+  animation-delay: 1.5s;
+  animation-duration: 1.8s;
   animation-timing-function: ease-in;
   animation-name: ${ScrollUp};
   animation-fill-mode: forwards;

@@ -24,7 +24,6 @@ const Button = styled.button`
 
   text-decoration: none;
   font-family: 'Bold';
-  font-weight: 700;
   font-size: 16px;
   color: #222222;
   cursor: pointer;

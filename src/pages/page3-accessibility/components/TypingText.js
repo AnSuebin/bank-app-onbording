@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 const Typing = styled.p`
   font-family: 'Bold';
-  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   letter-spacing: -0.02em;
