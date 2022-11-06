@@ -12,7 +12,7 @@ to {
 `;
 
 const SubTitle = styled.div`
-  font-family: 'Spoqa Han Sans Neo';
+  font-family: 'Medium';
   color: #1355b4;
   font-weight: 500;
   font-size: 19px;
@@ -25,7 +25,7 @@ const SubTitle = styled.div`
 `;
 
 const MainTitle = styled.div`
-  font-family: 'Spoqa Han Sans Neo';
+  font-family: 'Bold';
   font-style: normal;
   margin-top: 8px;
   color: #222222;
