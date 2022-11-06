@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
 
 import Safety from './pages/page1-safety/Safety';
 import Convenience from './pages/page2-convenience/Convenience';
