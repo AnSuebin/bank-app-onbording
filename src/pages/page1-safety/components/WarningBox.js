@@ -30,7 +30,7 @@ const Warning = styled.div`
   }
   p {
     margin-top: 8px;
-    font-family: 'Spoqa Han Sans Neo';
+    font-family: 'Medium';
     font-weight: 500;
     font-size: 15px;
     line-height: 21px;
@@ -39,15 +39,22 @@ const Warning = styled.div`
     width: 213px;
     letter-spacing: -0.02em;
     color: #343434;
+    span {
+      font-family: 'Bold';
+      font-weight: 700;
+    }
   }
 `;
 
-const WarningBox = ({ text }) => {
+const WarningBox = () => {
   return (
     <>
       <Warning>
         <img src={WaringIcon} alt="악성앱 탐지 아이콘" />
-        <p>{text}</p>
+        <p>
+          제 3자가 임의로 설치한 것으로 의심되는 <span>악성앱이 탐지</span>
+          되었습니다.
+        </p>
       </Warning>
     </>
   );

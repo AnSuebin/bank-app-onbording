@@ -65,8 +65,9 @@ const Safety = () => {
               <WarningBox text={text} />
               <DeleteBox setIsClick={setIsClick} />
               <Click
+                top="235px"
+                transform="translateX(50px)"
                 animationData="click"
-                loop="true"
                 onClick={() => {
                   setIsClick(true);
                 }}

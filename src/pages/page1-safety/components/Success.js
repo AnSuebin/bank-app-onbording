@@ -29,7 +29,7 @@ const SuccessContainer = styled.div`
     margin-top: 8px;
     width: 120px;
 
-    font-family: 'Spoqa Han Sans Neo';
+    font-family: 'Medium';
     font-weight: 500;
     font-size: 15px;
     line-height: 21px;

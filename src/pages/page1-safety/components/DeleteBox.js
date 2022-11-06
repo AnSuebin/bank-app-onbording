@@ -2,6 +2,8 @@
 import styled from 'styled-components';
 // 이미지
 import bankIcon from '../../../utils/safety/bank-icon.png';
+import exclamationMark from '../../../utils/safety/exclamationMark.png';
+import oval from '../../../utils/safety/oval.png';
 
 const DeleteContainer = styled.div`
   box-sizing: border-box;
@@ -33,7 +35,7 @@ const DeleteContainer = styled.div`
     border: none;
     border-radius: 4px;
 
-    font-family: 'Spoqa Han Sans Neo';
+    font-family: 'Medium';
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
@@ -53,32 +55,21 @@ const BankName = styled.div`
   position: relative;
   margin-left: 8px;
   h5 {
-    font-family: 'Spoqa Han Sans Neo';
+    font-family: 'Medium';
     font-weight: 500;
     font-size: 15px;
     line-height: 19px;
     letter-spacing: -0.02em;
     color: #222222;
-    span {
+    text-align: center;
+    img {
       position: absolute;
-      margin-left: 10.5px;
-      font-family: 'Spoqa Han Sans Neo';
-      font-weight: 500;
-      font-size: 11px;
-      color: #f43e3e;
-    }
-    div {
-      position: absolute;
-      width: 14px;
-      height: 14px;
+      mix-blend-mode: normal;
       border: 1px solid #f43e3e;
-      display: inline-block;
-      border-radius: 50%;
-      transform: translate(4px, 0.5px);
     }
   }
   p {
-    font-family: 'Spoqa Han Sans Neo';
+    font-family: 'Medium';
     font-weight: 500;
     font-size: 11px;
     line-height: 14px;
@@ -95,10 +86,7 @@ const DeleteBox = ({ setIsClick }) => {
         <BankContainer>
           <img src={bankIcon} alt="kb 국민은행 app 아이콘" />
           <BankName>
-            <h5>
-              KB 국민은행<span>!</span>
-              <div></div>
-            </h5>
+            <h5>KB 국민은행</h5>
             <p>IP:Rag26w_sh4</p>
           </BankName>
         </BankContainer>
