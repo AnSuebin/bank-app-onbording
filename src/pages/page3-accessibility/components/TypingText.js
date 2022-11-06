@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const Typing = styled.p`
-  font-family: 'Spoqa Han Sans Neo';
+  font-family: 'Bold';
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -18,7 +18,7 @@ const TypingText = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsTypingTime(true);
-    }, 1600);
+    }, 900);
     return () => {
       clearTimeout(timeout);
     };
@@ -29,7 +29,7 @@ const TypingText = () => {
       const interval = setInterval(() => {
         setText(Text + txt[Count]);
         setCount(Count + 1);
-      }, 130);
+      }, 260);
       if (Count === txt.length) {
         clearInterval(interval);
       }
