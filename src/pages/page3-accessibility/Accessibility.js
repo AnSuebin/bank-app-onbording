@@ -1,5 +1,6 @@
 //훅
 import { useEffect, useState } from 'react';
+// CSS
 import styled, { keyframes } from 'styled-components';
 // 컴포넌트
 import BottomButton from '../../components/BottomButton';

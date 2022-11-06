@@ -1,11 +1,10 @@
-// 훅
+// CSS
 import styled from 'styled-components';
 // 이미지
 import rectangle from '../../../utils/professionalism/rectangle.png';
 
 const InfoBox = styled.div`
   position: absolute;
-
   display: flex;
   flex-direction: column;
   justify-content: center;

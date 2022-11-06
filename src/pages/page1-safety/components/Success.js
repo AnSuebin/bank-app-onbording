@@ -1,9 +1,10 @@
-// 훅
+// CSS
 import styled, { keyframes } from 'styled-components';
 // 로티 에니메이션 및 이미지
 import Lottie from 'lottie-react';
 import complete from '../../../assets/lottie/complete.json';
 
+//-- 애니메이션 --//
 const opacity = keyframes`
 from {
   opacity: 0;
@@ -13,6 +14,7 @@ to {
 }
 `;
 
+//-- 스타일 --//
 const SuccessContainer = styled.div`
   position: absolute;
   display: flex;

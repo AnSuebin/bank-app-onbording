@@ -1,5 +1,7 @@
+// CSS
 import styled, { keyframes } from 'styled-components';
 
+//-- 애니메이션 --//
 const fadeIn = keyframes`
 from {
   opacity: 0;
@@ -11,12 +13,14 @@ to {
 }
 `;
 
+//-- 스타일 --//
 const SubTitle = styled.div`
   font-family: 'Medium';
   color: #1355b4;
   font-weight: 500;
   font-size: 19px;
   line-height: 24px;
+
   animation-duration: 0.55s;
   animation-delay: 0.5s;
   animation-timing-function: ease-in-out;
@@ -25,13 +29,14 @@ const SubTitle = styled.div`
 `;
 
 const MainTitle = styled.div`
-  font-family: 'Bold';
-  font-style: normal;
   margin-top: 8px;
-  color: #222222;
+  font-family: 'Bold';
+  font-weight: 700;
   font-weight: 700;
   font-size: 26px;
   line-height: 36px;
+  color: #222222;
+
   animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
   animation-name: ${fadeIn};

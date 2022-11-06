@@ -1,39 +1,30 @@
-import styled from 'styled-components';
+// 훅
 import { useNavigate } from 'react-router-dom';
+// CSS
+import styled from 'styled-components';
 
 const Close = styled.button`
+  padding: 10px;
   background-color: transparent;
   border: none;
-  font-size: 16px;
-  /* padding: 10px; */
-  text-decoration: none;
-  color: #222222;
-  cursor: pointer;
-  padding: 10px;
+
   font-family: 'Regular';
   font-size: 13px;
   color: #6e767e;
-`;
-
-const CloseContainer = styled.div`
-  display: flex;
-  margin-top: 8px;
-  justify-content: end;
-  margin-right: 7px;
+  text-decoration: none;
+  cursor: pointer;
 `;
 
 const CloseButton = () => {
   const navigate = useNavigate();
   return (
-    <CloseContainer>
-      <Close
-        onClick={() => {
-          navigate('/safety');
-        }}
-      >
-        건너뛰기
-      </Close>
-    </CloseContainer>
+    <Close
+      onClick={() => {
+        navigate('/safety');
+      }}
+    >
+      건너뛰기
+    </Close>
   );
 };
 

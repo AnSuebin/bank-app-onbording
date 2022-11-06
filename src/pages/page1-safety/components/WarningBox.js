@@ -1,4 +1,4 @@
-// 훅
+// CSS
 import styled from 'styled-components';
 // 이미지
 import WaringIcon from '../../../utils/safety/warning-icon.png';

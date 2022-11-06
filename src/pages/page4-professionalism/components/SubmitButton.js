@@ -1,9 +1,8 @@
-// 훅
+// CSS
 import styled from 'styled-components';
 
 const Button = styled.button`
   position: absolute;
-
   display: flex;
   justify-content: center;
   align-items: center;

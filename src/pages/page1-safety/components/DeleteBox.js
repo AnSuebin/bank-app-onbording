@@ -1,9 +1,7 @@
-// 훅
+// CSS
 import styled from 'styled-components';
 // 이미지
 import bankIcon from '../../../utils/safety/bank-icon.png';
-import exclamationMark from '../../../utils/safety/exclamationMark.png';
-import oval from '../../../utils/safety/oval.png';
 
 const DeleteContainer = styled.div`
   box-sizing: border-box;

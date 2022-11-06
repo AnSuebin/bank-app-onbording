@@ -1,5 +1,7 @@
+// CSS
 import styled, { keyframes } from 'styled-components';
 
+//-- 애니메이션 --//
 const fadeIn = keyframes`
 from {
   opacity: 0;
@@ -11,6 +13,7 @@ to {
 }
 `;
 
+//-- 스타일 --//
 const Phone = styled.div`
   width: 312px;
   height: 296px;

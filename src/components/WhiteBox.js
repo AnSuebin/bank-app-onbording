@@ -1,4 +1,4 @@
-// 훅
+// CSS
 import styled from 'styled-components';
 
 const WhiteBlockBox = styled.div`
@@ -10,7 +10,6 @@ const WhiteBlockBox = styled.div`
 
   width: 312px;
   height: 139px;
-
   background: #ffffff;
 
   z-index: 4;

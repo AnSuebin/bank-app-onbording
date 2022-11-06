@@ -1,4 +1,4 @@
-// 훅
+// CSS
 import styled, { keyframes } from 'styled-components';
 
 //-- 애니메이션 --//
