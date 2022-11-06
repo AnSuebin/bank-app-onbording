@@ -82,7 +82,7 @@ const Convenience = () => {
           <WhiteBox />
           <Myfacetalk src={myfacetalk} alt="나의 대화화면" />
           <Facetalk src={facetalk} alt="상담사 대화화면" />
-          <Conversation conversations={conversation} />
+          <Conversation />
         </MainImageContainer>
       </Main>
       <BottomButton

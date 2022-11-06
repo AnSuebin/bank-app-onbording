@@ -2,21 +2,60 @@
 import styled, { keyframes } from 'styled-components';
 
 //-- 애니메이션 --//
-const comeUp = keyframes`
+const comeUp1 = keyframes`
   0%{
     transform: translateY(130px);
+    opacity: 0;
   }
-  20%{
-    transform: translateY(130px);
-  }
-  40%{
+  33%{
     transform: translateY(92px);
+    opacity: 1;
   }
-  80%{
+  66%{
     transform: translateY(46px);
+    opacity: 1;
   }
   100%{
     transform: translateY(0px);
+    opacity: 1;
+  }
+`;
+
+const comeUp2 = keyframes`
+  0%{
+    transform: translateY(130px);
+    opacity: 0;
+  }
+  33%{
+    transform: translateY(92px);
+    opacity: 0;
+  }
+  66%{
+    transform: translateY(46px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+`;
+
+const comeUp3 = keyframes`
+  0%{
+    transform: translateY(130px);
+    opacity: 0;
+  }
+  33%{
+    transform: translateY(92px);
+    opacity: 0;
+  }
+  66%{
+    transform: translateY(46px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
   }
 `;
 
@@ -30,7 +69,9 @@ const ConvenienceContainer = styled.div`
   z-index: 3;
 `;
 
-const Conversations = styled.div`
+const Conversation1 = styled.div`
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
 
@@ -40,8 +81,7 @@ const Conversations = styled.div`
   padding-right: 16px;
   margin-bottom: 8px;
 
-  font-family: 'Spoqa Han Sans Neo';
-  font-weight: 500;
+  font-family: 'Medium';
   font-size: 15px;
   line-height: 19px;
   letter-spacing: -0.02em;
@@ -52,21 +92,77 @@ const Conversations = styled.div`
   animation-delay: 0.8s;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
-  animation-name: ${comeUp};
+  animation-name: ${comeUp1};
   animation-fill-mode: backwards;
 
   z-index: 10;
 `;
 
-const Conversation = ({ conversations }) => {
+const Conversation2 = styled.div`
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  width: ${(props) => props.width};
+  height: 38px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 8px;
+
+  font-family: 'Medium';
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: #222222;
+  background: #f8d459;
+  border-radius: 2px 20px 20px 20px;
+
+  animation-delay: 0.8s;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-name: ${comeUp2};
+  animation-fill-mode: backwards;
+
+  z-index: 10;
+`;
+
+const Conversation3 = styled.div`
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  width: ${(props) => props.width};
+  height: 38px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 8px;
+
+  font-family: 'Medium';
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: #222222;
+  background: #f8d459;
+  border-radius: 2px 20px 20px 20px;
+
+  animation-delay: 0.8s;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-name: ${comeUp3};
+  animation-fill-mode: backwards;
+
+  z-index: 10;
+`;
+
+const Conversation = () => {
   return (
     <>
       <ConvenienceContainer>
-        {conversations.map((conversation) => (
-          <Conversations width={`${conversation.length * 11.5}px`}>
-            {conversation}
-          </Conversations>
-        ))}
+        <Conversation1 width="147px">안녕하세요, 고객님</Conversation1>
+        <Conversation2 width="157px">상담원 김리브입니다</Conversation2>
+        <Conversation3 width="198px">회원가입 도와드리겠습니다</Conversation3>
       </ConvenienceContainer>
     </>
   );
