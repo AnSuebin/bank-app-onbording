@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# 국민은행 액티브 시니어 온보딩 페이지
+액티브 시니어를 위한 금융앱 온보딩 제작 챌린지 (넘블 주최)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 00. 배포 링크
+- https://ansuebin.github.io/bank-app-onbording/
 
-## Available Scripts
+### 01. 프로젝트 소개
+- 기획자, 디자이너, 프론트 개발자의 협업 프로젝트입니다.
+- 타겟인 액티브 시니어들이 금융앱을 보다 간단하고 쉽게 사용할 수 있도록, 인터랙티브를 컨셉으로 간단한 동작을 직접 해보며 해당 앱의 강점을 체감할 수 있도록 제작하였습니다. 
+- 기획 및 디자인 기간: 2022.09.30 ~ 2022.11.03
+- 개발 기간: 2022.10.28 ~ 2022.11.06 (약 10일)
 
-In the project directory, you can run:
+### 02. 개발 조건
+- React Framework를 사용
+- Styled Component 사용
+- 인터렉티브 기능에 있어서 라이브러리의 사용을 최대한 지양하고, 자체적으로 기능들을 구현
+- Github Action, Github Pages를 활용하여 팀원과 개발 과정 공유 
 
-### `npm start`
+### 03. 페이지별 구현기능
+- 안전성
+  > 애니메이션과 아이콘을 활용하여, 사용자의 반응 유도
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 편리성
+  > 영상 및 애니메이션 활용하여, 사용자가 직접 영상통화를 체험하는 듯한 경험 제공
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 접근성
+  > 기능별, 페이지별 자동으로 넘어가는 것이 많은 페이지
+  최대한 자연스럽고 부드럽게 보여지도록 표현
 
-### `npm test`
+- 전문성
+  > 애니메이션과 아이콘을 활용하여, 사용자의 반응 유도
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 경제성
+  > 애니메이션과 아이콘을 활용하여, 사용자의 반응 유도
 
-### `npm run build`
+- 직관성
+  > 스위치 아이콘을 제작하여, 사용자의 기능 인지 유도
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 04 프로젝트 전, 인터렉티브 버튼 구현
+- 프로젝트 전, 인터렉티브 버튼들을 제작해 보았습니다.
+- 구성) 스위치 버튼, 드레그 앤 드롭, 드롭 리스트, 캐러셀
+- 배포) https://ansuebin.github.io/interactive-web/DandD
+- 깃허브) https://github.com/AnSuebin/interactive-web
