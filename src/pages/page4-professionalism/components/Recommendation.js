@@ -1,7 +1,7 @@
 // CSS
 import styled from 'styled-components';
 // 이미지
-import rectangle from '../../../utils/professionalism/rectangle.png';
+import figure from '../../../utils/professionalism/figure.png';
 
 const InfoBox = styled.div`
   position: absolute;
@@ -32,7 +32,7 @@ const InfoBox = styled.div`
   h3 {
     padding-top: 11.88px;
     font-family: 'Regular';
-    font-size: 17px;
+    font-size: 20px;
     line-height: 20px;
     letter-spacing: -0.02em;
     color: #343434;
@@ -42,7 +42,7 @@ const InfoBox = styled.div`
     font-family: 'Regular';
     font-size: 13px;
     line-height: 19px;
-    color: #8f989c;
+    color: #6f787c;
   }
 `;
 
@@ -51,7 +51,7 @@ const Recommendation = ({ mainText }) => {
     <>
       <InfoBox>
         <h5>{mainText.subTitle}</h5>
-        <img src={rectangle} alt="blank" />
+        <img src={figure} alt="수치" />
         <h3>{mainText.title}</h3>
         <p>{mainText.text}</p>
       </InfoBox>

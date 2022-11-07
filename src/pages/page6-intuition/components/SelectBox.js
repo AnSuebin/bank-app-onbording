@@ -7,7 +7,7 @@ const ToggleButtonbox = styled.div`
   box-sizing: border-box;
 
   position: absolute;
-  top: 241px;
+  top: 229px;
   left: 50%;
   transform: translateX(-50%);
 

@@ -8,6 +8,7 @@ const Typing = styled.p`
   font-size: 21px;
   line-height: 26px;
   letter-spacing: -0.02em;
+  color: #222222;
 `;
 
 const TypingText = () => {

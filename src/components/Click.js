@@ -10,7 +10,7 @@ const ClickIcon = styled.div`
   left: 50%;
   top: ${(props) => props.top};
   transform: ${(props) => props.transform};
-  z-index: 4;
+  z-index: 5;
 `;
 
 const Click = ({ onClick, top, transform }) => {

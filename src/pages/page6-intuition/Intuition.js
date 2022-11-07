@@ -6,6 +6,7 @@ import styled, { keyframes } from 'styled-components';
 import Header from '../../components/Header';
 import Title from '../../components/Title';
 import WhiteBox from '../../components/WhiteBox';
+import WhiteGradientBox from '../../components/WhiteGradientBox';
 import Click from '../../components/Click';
 import SelectBox from './components/SelectBox';
 import BottomButton from '../../components/BottomButton';
@@ -14,6 +15,8 @@ import { mockData } from '../../data/mockData';
 // 이미지 및 애니메이션
 import smallImg from '../../utils/intuition/small-img.png';
 import bigImg from '../../utils/intuition/big-img.png';
+import shadow from '../../utils/intuition/shadow.png';
+import smallShadow from '../../utils/intuition/small-shadow.png';
 
 //-- 애니메이션 --//
 const fadeIn = keyframes`
@@ -84,6 +87,13 @@ const BigPhoneImg = styled.img`
   border-radius: 36px 36px 0px 0px;
 `;
 
+const Shadow = styled.img`
+  width: 305px;
+  height: 25px;
+  position: absolute;
+  top: 207px;
+`;
+
 const Intuition = () => {
   const [title, setTitle] = useState('');
   const [subtitle, setSubTitle] = useState('');
@@ -111,6 +121,7 @@ const Intuition = () => {
         <Title subTitle={title} mainTitle={subtitle} />
         <MainImageContainer>
           <WhiteBox></WhiteBox>
+          <WhiteGradientBox></WhiteGradientBox>
           {isChecked === false && (
             <>
               <WhiteSmallPhone>
@@ -136,6 +147,7 @@ const Intuition = () => {
             }}
             mainText={mainText}
           />
+          <Shadow src={isChecked ? shadow : smallShadow} alt="" />
         </MainImageContainer>
       </Main>
       {isChecked === true && (

@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 // 이미지
 import bankIcon from '../../../utils/safety/bank-icon.png';
+import alarm from '../../../utils/safety/alarm.png';
 
 const DeleteContainer = styled.div`
   box-sizing: border-box;
@@ -60,17 +61,19 @@ const BankName = styled.div`
     text-align: center;
     img {
       position: absolute;
-      mix-blend-mode: normal;
-      border: 1px solid #f43e3e;
+      margin-top: 1.5px;
+      margin-left: 3px;
+      width: 14px;
+      height: 14px;
     }
   }
   p {
+    margin-top: 2px;
     font-family: 'Medium';
     font-size: 11px;
     line-height: 14px;
     letter-spacing: -0.02em;
-
-    color: #8f989c;
+    color: #6f787c;
   }
 `;
 
@@ -81,7 +84,9 @@ const DeleteBox = ({ setIsClick }) => {
         <BankContainer>
           <img src={bankIcon} alt="kb 국민은행 app 아이콘" />
           <BankName>
-            <h5>KB 국민은행</h5>
+            <h5>
+              KB 국민은행 <img src={alarm} alt="경고"></img>
+            </h5>
             <p>IP:Rag26w_sh4</p>
           </BankName>
         </BankContainer>
