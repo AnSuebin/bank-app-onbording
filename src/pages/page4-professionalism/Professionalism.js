@@ -35,7 +35,7 @@ from {
 }
 to {
 
-  transform: translateY(-300px);
+  transform: translateY(-210px);
 }
 `;
 
