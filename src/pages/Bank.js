@@ -18,7 +18,7 @@ const MainPage = styled.div`
 const Bank = () => {
   return (
     <MainPage>
-      <img src={bank}></img>
+      <img src={bank} alt="국민 은행 앱"></img>
     </MainPage>
   );
 };
