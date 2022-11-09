@@ -40,13 +40,16 @@ const EventDetailWrapper = styled.div`
     }
   }
 `;
+const options = {
+  setSpeed: 10,
+};
 
 const EventDetail = () => {
   return (
     <>
       <EventDetailWrapper>
         <div>
-          <Lottie animationData={coin} loop="false" />
+          <Lottie animationData={coin} options={options} loop={false} />
           <img src={eventDetail} alt="적금 이벤트" />
         </div>
       </EventDetailWrapper>
