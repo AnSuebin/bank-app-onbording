@@ -52,21 +52,24 @@ const BankContainer = styled.div`
 const BankName = styled.div`
   position: relative;
   margin-left: 8px;
-  h5 {
-    font-family: 'Medium';
-    font-size: 15px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-    color: #222222;
-    text-align: center;
+  div {
+    display: flex;
+    h5 {
+      font-family: 'Medium';
+      font-size: 15px;
+      line-height: 19px;
+      letter-spacing: -0.02em;
+      color: #222222;
+      text-align: center;
+    }
     img {
-      position: absolute;
-      margin-top: 1.5px;
+      margin-top: 1px;
       margin-left: 3px;
       width: 14px;
       height: 14px;
     }
   }
+
   p {
     margin-top: 2px;
     font-family: 'Medium';
@@ -84,9 +87,10 @@ const DeleteBox = ({ setIsClick }) => {
         <BankContainer>
           <img src={bankIcon} alt="kb 국민은행 app 아이콘" />
           <BankName>
-            <h5>
-              KB 국민은행 <img src={alarm} alt="경고"></img>
-            </h5>
+            <div>
+              <h5>KB 국민은행</h5>
+              <img src={alarm} alt="경고"></img>
+            </div>
             <p>IP:Rag26w_sh4</p>
           </BankName>
         </BankContainer>
