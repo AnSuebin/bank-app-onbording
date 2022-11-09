@@ -10,7 +10,7 @@ import DeleteBox from './components/DeleteBox';
 import Click from '../../components/Click';
 import Success from './components/Success';
 import PhoneBackground from '../../components/PhoneBackground';
-import BottomButton from '../../components/BottomButton';
+import BottomOneButton from './components/BottomOneButton';
 // 데이터
 import { mockData } from '../../data/mockData';
 
@@ -66,8 +66,8 @@ const Safety = () => {
               <WarningBox text={text} />
               <DeleteBox setIsClick={setIsClick} />
               <Click
-                top="235px"
-                transform="translateX(50px)"
+                top="170px"
+                transform="translateX(-58.5px)"
                 animationData="click"
                 onClick={() => {
                   setIsClick(true);
@@ -80,9 +80,7 @@ const Safety = () => {
         </MainImageContainer>
         <PhoneBackground />
       </Main>
-      {isClick === true && (
-        <BottomButton backLocation="/" nextLocation="/convenience" />
-      )}
+      {isClick === true && <BottomOneButton nextLocation="/convenience" />}
     </>
   );
 };
