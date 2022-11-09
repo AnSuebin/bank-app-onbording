@@ -7,6 +7,7 @@ import Accessibility from './pages/page3-accessibility/Accessibility';
 import Professionalism from './pages/page4-professionalism/Professionalism';
 import Economics from './pages/page5-economics/Economics';
 import Intuition from './pages/page6-intuition/Intuition';
+import Bank from './pages/Bank';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/professionalism" element={<Professionalism />} />
         <Route path="/economics" element={<Economics />} />
         <Route path="/intuition" element={<Intuition />} />
+        <Route path="/bank" element={<Bank />} />
       </Routes>
     </BrowserRouter>
   );
