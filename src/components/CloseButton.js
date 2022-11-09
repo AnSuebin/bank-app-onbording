@@ -20,7 +20,7 @@ const CloseButton = () => {
   return (
     <Close
       onClick={() => {
-        navigate('/safety');
+        navigate('/bank');
       }}
     >
       건너뛰기

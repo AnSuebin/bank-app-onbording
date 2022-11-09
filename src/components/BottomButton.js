@@ -45,7 +45,7 @@ const ButtonContainer = styled.div`
   animation-fill-mode: backwards;
 `;
 
-const BottomButton = ({ backLocation, nextLocation, delay }) => {
+const BottomButton = ({ backLocation, nextLocation, delay, next }) => {
   const navigate = useNavigate();
   return (
     <ButtonContainer delay={delay}>
@@ -55,7 +55,7 @@ const BottomButton = ({ backLocation, nextLocation, delay }) => {
           navigate(backLocation);
         }}
       >
-        ＜ 뒤로가기
+        ＜ 이전
       </Button>
       <Button
         backgroundColor="#F8D459"
@@ -63,10 +63,14 @@ const BottomButton = ({ backLocation, nextLocation, delay }) => {
           navigate(nextLocation);
         }}
       >
-        넘어가기 ＞
+        {next}
       </Button>
     </ButtonContainer>
   );
+};
+
+BottomButton.defaultProps = {
+  next: '다음 ＞',
 };
 
 export default BottomButton;
