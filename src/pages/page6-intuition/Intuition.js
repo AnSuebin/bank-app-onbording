@@ -128,9 +128,12 @@ const Intuition = () => {
                 <SmallPhoneImg src={smallImg} alt="기본 모드"></SmallPhoneImg>
               </WhiteSmallPhone>
               <Click
-                top="275px"
-                transform="translateX(78px)"
+                top="188px"
+                transform="translateX(-15px)"
                 animationData="click"
+                onClick={() => {
+                  setIsChecked(!isChecked);
+                }}
               />
             </>
           )}
@@ -141,17 +144,16 @@ const Intuition = () => {
               </WhiteBigPhone>
             </>
           )}
-          <SelectBox
-            onClick={() => {
-              setIsChecked(!isChecked);
-            }}
-            mainText={mainText}
-          />
+          <SelectBox isChecked={isChecked} mainText={mainText} />
           <Shadow src={isChecked ? shadow : smallShadow} alt="" />
         </MainImageContainer>
       </Main>
       {isChecked === true && (
-        <BottomButton backLocation="/economics" nextLocation="/" />
+        <BottomButton
+          backLocation="/economics"
+          nextLocation="/bank"
+          next="시작하기 ＞"
+        />
       )}
     </div>
   );
