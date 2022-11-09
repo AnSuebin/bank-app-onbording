@@ -1,7 +1,17 @@
 // 훅
 import React from 'react';
 // CSS
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
+
+const ButtonSlide = keyframes`
+  from {
+  }
+  to {
+    left: calc(100%);
+    transform: translateX(-100%);
+    background-color: #f5bf41;
+  }
+`;
 
 const SwitchButton = styled.span`
   content: '';
@@ -14,10 +24,17 @@ const SwitchButton = styled.span`
   background: #888e98;
   box-shadow: 5px 5px 12px rgba(144, 145, 146, 0.2);
 
-  transition: 0.2s;
+  ${(props) =>
+    props.isChecked &&
+    css`
+      animation-duration: 0.2s;
+      animation-timing-function: ease-in;
+      animation-name: ${ButtonSlide};
+      animation-fill-mode: forwards;
+    `}
 `;
 
-const SwitchLabel = styled.label`
+const SwitchLabel = styled.div`
   position: relative;
   display: flex;
   align-items: center;
@@ -25,33 +42,18 @@ const SwitchLabel = styled.label`
 
   width: 48px;
   height: 16px;
-  background: #eff1f3;
-  border-radius: 100px;
+  background-color: ${(props) => (props.isChecked ? '#FAE585' : '#EFF1F3')};
 
+  border-radius: 100px;
   transition: background-color 0.2s;
   cursor: pointer;
 `;
 
-const SwitchCheckbox = styled.input`
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  &:checked + ${SwitchLabel} {
-    background: #fae585;
-    ${SwitchButton} {
-      left: calc(100%);
-      transform: translateX(-100%);
-      background-color: #f5bf41;
-    }
-  }
-`;
-
-const ToggleButton = ({ onClick }) => {
+const ToggleButton = ({ isChecked }) => {
   return (
     <>
-      <SwitchCheckbox id={`switch-new`} type="checkbox" onChange={onClick} />
-      <SwitchLabel htmlFor={`switch-new`}>
-        <SwitchButton />
+      <SwitchLabel isChecked={isChecked}>
+        <SwitchButton isChecked={isChecked} />
       </SwitchLabel>
     </>
   );

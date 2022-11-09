@@ -33,12 +33,12 @@ const ToggleButtonbox = styled.div`
   }
 `;
 
-const SelectBox = ({ onClick, mainText }) => {
+const SelectBox = ({ isChecked, mainText }) => {
   return (
     <>
       <ToggleButtonbox>
         <div>{mainText}</div>
-        <ToggleButton onClick={onClick} />
+        <ToggleButton isChecked={isChecked} />
       </ToggleButtonbox>
     </>
   );
