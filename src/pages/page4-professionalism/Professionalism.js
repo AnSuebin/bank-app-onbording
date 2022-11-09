@@ -123,8 +123,8 @@ const Professionalism = () => {
                 }}
               />
               <Click
-                top="265px"
-                transform="translateX(35px)"
+                top="190px"
+                transform="translateX(-45px)"
                 onClick={() => {
                   setIsClick(true);
                 }}

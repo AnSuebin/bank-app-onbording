@@ -82,8 +82,8 @@ const Economics = () => {
                 }}
               />
               <Click
-                top="260px"
-                transform="translateX(65px)"
+                top="190px"
+                transform="translateX(-20px)"
                 animationData="click"
                 onClick={() => {
                   setIsClick(true);
