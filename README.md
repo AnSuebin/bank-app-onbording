@@ -19,27 +19,33 @@
 ### 03. 페이지별 구현기능
 - 안전성
   > 애니메이션과 아이콘을 활용하여, 사용자의 반응 유도
+  
   ![페이지1](https://user-images.githubusercontent.com/101397314/200947499-02d07f67-13b1-4698-9b79-774a312565b0.gif)
 
 - 편리성
   > 영상 및 애니메이션 활용하여, 사용자가 직접 영상통화를 체험하는 듯한 경험 제공
+  
   ![페이지2](https://user-images.githubusercontent.com/101397314/200947558-8e825b92-3309-466f-a5eb-0d579bdcf41e.gif)
 
 - 접근성
   > 기능별, 페이지별 자동으로 넘어가는 것이 많은 페이지
   최대한 자연스럽고 부드럽게 보여지도록 표현
+  
   ![페이지3](https://user-images.githubusercontent.com/101397314/200947592-97ad0d6c-9347-481c-98cb-142eae336ec2.gif)
 
 - 전문성
   > 애니메이션과 아이콘을 활용하여, 사용자의 반응 유도
+  
   ![페이지4](https://user-images.githubusercontent.com/101397314/200947623-b3569543-0697-44ec-a228-2372ba932507.gif)
 
 - 경제성
   > 애니메이션과 아이콘을 활용하여, 사용자의 반응 유도
+  
   ![페이지5](https://user-images.githubusercontent.com/101397314/200947650-429fa659-f1dd-4254-9f91-47f9adfa87a8.gif)
 
 - 직관성
   > 스위치 아이콘을 제작하여, 사용자의 기능 인지 유도
+  
   ![페이지6](https://user-images.githubusercontent.com/101397314/200947668-f2309f4e-e751-4849-8f1c-2806413f17f4.gif)
 
 ### 04 프로젝트 전, 인터렉티브 버튼 구현
