@@ -29,6 +29,15 @@ to {
 }
 `;
 
+const opacity = keyframes`
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+`;
+
 const ScrollUp = keyframes`
 from {
   transform: translateY(0);
@@ -76,6 +85,11 @@ const PortfolioContainer = styled.div`
     margin-top: 20px;
     overflow: hidden;
   }
+
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-name: ${opacity};
+  animation-fill-mode: backwards;
 `;
 
 const Portfolio = styled.img`
