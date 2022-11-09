@@ -30,6 +30,15 @@ to {
 }
 `;
 
+const opacity = keyframes`
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+`;
+
 //-- 스타일 --//
 const Main = styled.div`
   display: flex;
@@ -78,6 +87,11 @@ const WhiteBigPhone = styled.div`
   border: 1px solid #e6e7ea;
   box-shadow: 0px 0px 40px rgba(51, 53, 56, 0.09);
   border-radius: 36px 36px 0px 0px;
+
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-name: ${opacity};
+  animation-fill-mode: backwards;
 `;
 
 const BigPhoneImg = styled.img`

@@ -149,6 +149,11 @@ const RecomendInfo = styled.div`
       animation-fill-mode: forwards;
     }
   }
+
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-name: ${opacity};
+  animation-fill-mode: backwards;
 `;
 
 const Accessibility = () => {
