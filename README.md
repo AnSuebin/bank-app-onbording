@@ -15,13 +15,13 @@
 - 기획관련 내용 링크 : [온보딩 페이지 PRD](https://sunset-sleet-86e.notion.site/PRD-d904f621fe9b4db0a071a3d531e0f8fc)
 - 디자인관련 내용 링크 : [UIUX 분석/컨셉](https://www.notion.so/UIUX-170e1b8cb40f4b24bfc0a8949cef4a16)
 
-### 02. 개발 조건
+### 03. 개발 조건
 - React Framework를 사용
 - Styled Component 사용
 - 인터렉티브 기능에 있어서 라이브러리의 사용을 최대한 지양하고, 자체적으로 기능들을 구현
 - Github Action, Github Pages를 활용하여 팀원과 개발 과정 공유 
 
-### 03. 페이지별 구현기능
+### 04. 페이지별 구현기능
 - 안전성
   > 애니메이션과 아이콘을 활용하여, 사용자의 반응 유도
   
@@ -53,7 +53,7 @@
   
   ![페이지6](https://user-images.githubusercontent.com/101397314/200947668-f2309f4e-e751-4849-8f1c-2806413f17f4.gif)
 
-### 04 프로젝트 전, 인터렉티브 버튼 구현
+### 05 프로젝트 전, 인터렉티브 버튼 구현
 - 프로젝트 전, 인터렉티브 버튼들을 제작해 보았습니다.
 - 구성) 스위치 버튼, 드레그 앤 드롭, 드롭 리스트, 캐러셀
 - 배포) https://ansuebin.github.io/interactive-web/DandD
