@@ -42,17 +42,18 @@
 - 전문성
   > 애니메이션과 아이콘을 활용하여, 사용자의 반응 유도
   
-  ![페이지4](https://user-images.githubusercontent.com/101397314/200947623-b3569543-0697-44ec-a228-2372ba932507.gif)
+  ![페이지4](https://user-images.githubusercontent.com/101397314/201073107-485989ae-676d-4b4b-b2b9-9dc90fcd121a.gif)
+
 
 - 경제성
   > 애니메이션과 아이콘을 활용하여, 사용자의 반응 유도
   
-  ![페이지5](https://user-images.githubusercontent.com/101397314/200947650-429fa659-f1dd-4254-9f91-47f9adfa87a8.gif)
+  ![페이지5](https://user-images.githubusercontent.com/101397314/201073221-34a433ba-44d5-497c-aa17-8461c2bd44aa.gif)
 
 - 직관성
   > 스위치 아이콘을 제작하여, 사용자의 기능 인지 유도
   
-  ![페이지6](https://user-images.githubusercontent.com/101397314/200947668-f2309f4e-e751-4849-8f1c-2806413f17f4.gif)
+  ![페이지6](https://user-images.githubusercontent.com/101397314/201073437-de49944d-d7c4-4d39-8f2d-f27844aa2885.gif)
 
 ### 05 프로젝트 전, 인터렉티브 버튼 모음집 제작
 - 프로젝트의 기획과 디자인 단계에서, 프로젝트에 필요한 인터렉티브 버튼 모음집을 제작해 보았습니다.
