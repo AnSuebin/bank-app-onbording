@@ -10,6 +10,11 @@
 - 기획 및 디자인 기간: 2022.09.30 ~ 2022.11.03
 - 개발 기간: 2022.10.28 ~ 2022.11.06 (약 10일)
 
+### 02. 기획 및 디자인과 협업
+- 탄탄한 기획과 디자인을 기반으로 제작된 프로젝트입니다.
+- 기획관련 내용 링크 : [온보딩 페이지 PRD](https://sunset-sleet-86e.notion.site/PRD-d904f621fe9b4db0a071a3d531e0f8fc)
+- 디자인관련 내용 링크 : [UIUX 분석/컨셉](https://www.notion.so/UIUX-170e1b8cb40f4b24bfc0a8949cef4a16)
+
 ### 02. 개발 조건
 - React Framework를 사용
 - Styled Component 사용
