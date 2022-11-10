@@ -54,8 +54,8 @@
   
   ![페이지6](https://user-images.githubusercontent.com/101397314/200947668-f2309f4e-e751-4849-8f1c-2806413f17f4.gif)
 
-### 05 프로젝트 전, 인터렉티브 버튼 구현
-- 프로젝트 전, 인터렉티브 버튼들을 제작해 보았습니다.
+### 05 프로젝트 전, 인터렉티브 버튼 모음집 제작
+- 프로젝트의 기획과 디자인 단계에서, 프로젝트에 필요한 인터렉티브 버튼 모음집을 제작해 보았습니다.
 - 구성) 스위치 버튼, 드레그 앤 드롭, 드롭 리스트, 캐러셀
 - 배포) https://ansuebin.github.io/interactive-web/DandD
 - 깃허브) https://github.com/AnSuebin/interactive-web
