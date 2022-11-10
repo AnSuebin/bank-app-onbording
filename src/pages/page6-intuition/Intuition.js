@@ -13,8 +13,8 @@ import BottomButton from '../../components/BottomButton';
 // 데이터
 import { mockData } from '../../data/mockData';
 // 이미지 및 애니메이션
-import bank from '../../utils/intuition/mybank.png';
-// import bigImg from '../../utils/intuition/big-img.png';
+import smallImg from '../../utils/intuition/small-img.png';
+import bigImg from '../../utils/intuition/big-img.png';
 import shadow from '../../utils/intuition/shadow.png';
 import smallShadow from '../../utils/intuition/small-shadow.png';
 
@@ -71,8 +71,9 @@ const WhiteSmallPhone = styled.div`
 `;
 
 const SmallPhoneImg = styled.img`
-  margin-top: 20px;
-  width: 244.1px;
+  margin-top: 16px;
+  width: 232px;
+  height: 246px;
   border-radius: 36px 36px 0px 0px;
 `;
 
@@ -97,7 +98,7 @@ const WhiteBigPhone = styled.div`
 const BigPhoneImg = styled.img`
   margin-top: 16px;
   width: 264px;
-  height: 276px;
+  height: 246px;
   border-radius: 36px 36px 0px 0px;
 `;
 
@@ -139,7 +140,7 @@ const Intuition = () => {
           {isChecked === false && (
             <>
               <WhiteSmallPhone>
-                <SmallPhoneImg src={bank} alt="기본 모드"></SmallPhoneImg>
+                <SmallPhoneImg src={smallImg} alt="기본 모드"></SmallPhoneImg>
               </WhiteSmallPhone>
               <Click
                 top="188px"
@@ -154,7 +155,7 @@ const Intuition = () => {
           {isChecked === true && (
             <>
               <WhiteBigPhone>
-                <BigPhoneImg src={bank} alt="큰글씨 모드"></BigPhoneImg>
+                <BigPhoneImg src={bigImg} alt="큰글씨 모드"></BigPhoneImg>
               </WhiteBigPhone>
             </>
           )}
