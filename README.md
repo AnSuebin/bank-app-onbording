@@ -1,5 +1,7 @@
 # 국민은행 액티브 시니어 온보딩 페이지
 액티브 시니어를 위한 금융앱 온보딩 제작 챌린지 (넘블 주최)
+<img width="689" alt="스크린샷 2022-11-28 오후 2 36 33" src="https://user-images.githubusercontent.com/101397314/204202069-5f015d4f-243b-4fec-b7c9-5326c5a891c7.png">
+
 
 ### 00. 배포 링크
 - https://ansuebin.github.io/bank-app-onbording/
@@ -54,6 +56,7 @@
   > 스위치 아이콘을 제작하여, 사용자의 기능 인지 유도
   
   ![페이지6](https://user-images.githubusercontent.com/101397314/201073437-de49944d-d7c4-4d39-8f2d-f27844aa2885.gif)
+  
 
 ### 05 프로젝트 전, 인터렉티브 버튼 모음집 제작
 - 프로젝트의 기획과 디자인 단계에서, 프로젝트에 필요한 인터렉티브 버튼 모음집을 제작해 보았습니다.
