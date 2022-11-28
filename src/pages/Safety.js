@@ -1,18 +1,18 @@
 // 훅
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 // CSS
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 // 컴포넌트
-import Header from '../../components/Header';
-import Title from '../../components/Title';
-import WarningBox from './components/WarningBox';
-import DeleteBox from './components/DeleteBox';
-import Click from '../../components/Click';
-import Success from './components/Success';
-import PhoneBackground from '../../components/PhoneBackground';
-import BottomOneButton from './components/BottomOneButton';
+import Header from "../components/Header";
+import Title from "../components/Title";
+import WarningBox from "../components/page1-safety/WarningBox";
+import DeleteBox from "../components/page1-safety/DeleteBox";
+import Click from "../components/Click";
+import Success from "../components/page1-safety/Success";
+import PhoneBackground from "../components/PhoneBackground";
+import BottomOneButton from "../components/page1-safety/BottomOneButton";
 // 데이터
-import { mockData } from '../../data/mockData';
+import { mockData } from "../data/mockData";
 
 //-- 애니메이션 --//
 const fadeIn = keyframes`
@@ -40,10 +40,10 @@ const MainImageContainer = styled.div`
 `;
 
 const Safety = () => {
-  const [title, setTitle] = useState('');
-  const [subtitle, setSubTitle] = useState('');
-  const [text, setText] = useState('');
-  const [successText, setSuccessText] = useState('');
+  const [title, setTitle] = useState("");
+  const [subtitle, setSubTitle] = useState("");
+  const [text, setText] = useState("");
+  const [successText, setSuccessText] = useState("");
   const [isClick, setIsClick] = useState(false);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 // CSS
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 //-- 애니메이션 --//
 const comeUp1 = keyframes`
@@ -71,88 +71,73 @@ const ConvenienceContainer = styled.div`
 
 const Conversation1 = styled.div`
   box-sizing: border-box;
-
   display: flex;
   align-items: center;
-
   width: ${(props) => props.width};
   height: 38px;
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 8px;
-
-  font-family: 'Medium';
+  font-family: "Medium";
   font-size: 15px;
   line-height: 19px;
   letter-spacing: -0.02em;
   color: #222222;
   background: #f8d459;
   border-radius: 2px 20px 20px 20px;
-
   animation-delay: 0.8s;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-name: ${comeUp1};
   animation-fill-mode: backwards;
-
   z-index: 10;
 `;
 
 const Conversation2 = styled.div`
   box-sizing: border-box;
-
   display: flex;
   align-items: center;
-
   width: ${(props) => props.width};
   height: 38px;
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 8px;
-
-  font-family: 'Medium';
+  font-family: "Medium";
   font-size: 15px;
   line-height: 19px;
   letter-spacing: -0.02em;
   color: #222222;
   background: #f8d459;
   border-radius: 2px 20px 20px 20px;
-
   animation-delay: 0.8s;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-name: ${comeUp2};
   animation-fill-mode: backwards;
-
   z-index: 10;
 `;
 
 const Conversation3 = styled.div`
   box-sizing: border-box;
-
   display: flex;
   align-items: center;
-
   width: ${(props) => props.width};
   height: 38px;
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 8px;
-
-  font-family: 'Medium';
+  font-family: "Medium";
   font-size: 15px;
   line-height: 19px;
   letter-spacing: -0.02em;
   color: #222222;
   background: #f8d459;
   border-radius: 2px 20px 20px 20px;
-
   animation-delay: 0.8s;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-name: ${comeUp3};
   animation-fill-mode: backwards;
-
   z-index: 10;
 `;
 

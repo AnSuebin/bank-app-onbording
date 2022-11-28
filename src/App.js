@@ -1,13 +1,13 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-import Safety from './pages/page1-safety/Safety';
-import Convenience from './pages/page2-convenience/Convenience';
-import Accessibility from './pages/page3-accessibility/Accessibility';
-import Professionalism from './pages/page4-professionalism/Professionalism';
-import Economics from './pages/page5-economics/Economics';
-import Intuition from './pages/page6-intuition/Intuition';
-import Bank from './pages/Bank';
+import Safety from "./pages/Safety";
+import Convenience from "./pages/Convenience";
+import Accessibility from "./pages/Accessibility";
+import Professionalism from "./pages/Professionalism";
+import Economics from "./pages/Economics";
+import Intuition from "./pages/Intuition";
+import Bank from "./pages/Bank";
 
 function App() {
   return (

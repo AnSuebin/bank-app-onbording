@@ -3,20 +3,15 @@ import { useEffect, useState } from "react";
 // CSS
 import styled, { keyframes } from "styled-components";
 // 컴포넌트
-import Header from "../../components/Header";
-import Title from "../../components/Title";
-import WhiteBox from "../../components/WhiteBox";
-import WhiteGradientBox from "../../components/WhiteGradientBox";
-import Click from "../../components/Click";
-import SelectBox from "./components/SelectBox";
-import BottomButton from "../../components/BottomButton";
+import Header from "../components/Header";
+import Title from "../components/Title";
+import WhiteBox from "../components/WhiteBox";
+import WhiteGradientBox from "../components/WhiteGradientBox";
+import Click from "../components/Click";
+import SelectBox from "../components/page6-intuition/SelectBox";
+import BottomButton from "../components/BottomButton";
 // 데이터
-import { mockData } from "../../data/mockData";
-// 이미지 및 애니메이션
-// import smallImg from '../../utils/intuition/small-img.png';
-// import bigImg from '../../utils/intuition/big-img.png';
-// import shadow from '../../utils/intuition/shadow.png';
-// import smallShadow from '../../utils/intuition/small-shadow.png';
+import { mockData } from "../data/mockData";
 
 //-- 애니메이션 --//
 const fadeIn = keyframes`

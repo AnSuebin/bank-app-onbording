@@ -1,8 +1,8 @@
 // CSS
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 // 로티 에니메이션 및 이미지
-import Lottie from 'lottie-react';
-import complete from '../../../assets/lottie/complete.json';
+import Lottie from "lottie-react";
+import complete from "../../assets/lottie/complete.json";
 
 //-- 애니메이션 --//
 const opacity = keyframes`
@@ -31,7 +31,7 @@ const SuccessContainer = styled.div`
     margin-top: 8px;
     width: 128px;
 
-    font-family: 'Medium';
+    font-family: "Medium";
     font-size: 15px;
     line-height: 21px;
     text-align: center;

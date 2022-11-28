@@ -3,21 +3,21 @@ import { useEffect, useState } from "react";
 // CSS
 import styled, { keyframes } from "styled-components";
 // 컴포넌트
-import BottomButton from "../../components/BottomButton";
-import Title from "../../components/Title";
-import Header from "../../components/Header";
-import PhoneBackground from "../../components/PhoneBackground";
-import TypingText from "./components/TypingText";
-import Text from "./components/Text";
-import WhiteBox from "../../components/WhiteBox";
-import WhiteGradientBox from "../../components/WhiteGradientBox";
-import WhitePhoneBackground from "../../components/WhitePhoneBackground";
+import BottomButton from "../components/BottomButton";
+import Title from "../components/Title";
+import Header from "../components/Header";
+import PhoneBackground from "../components/PhoneBackground";
+import TypingText from "../components/page3-accessibility/TypingText";
+import Text from "../components/page3-accessibility/Text";
+import WhiteBox from "../components/WhiteBox";
+import WhiteGradientBox from "../components/WhiteGradientBox";
+import WhitePhoneBackground from "../components/WhitePhoneBackground";
 //데이터
-import { mockData } from "../../data/mockData";
+import { mockData } from "../data/mockData";
 // 이미지 및 애니메이션
 // import Recommendation from '../../utils/accessibility/recommendation.png';
 import Lottie from "lottie-react";
-import voice from "../../assets/lottie/voice.json";
+import voice from "../assets/lottie/voice.json";
 
 //-- 애니메이션 --//
 const fadeIn = keyframes`

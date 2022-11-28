@@ -1,9 +1,8 @@
 // CSS
 import styled from "styled-components";
 // 이미지 및 애니메이션
-// import eventDetail from '../../../utils/economics/event.png';
 import Lottie from "lottie-react";
-import coin from "../../../assets/lottie/coin.json";
+import coin from "../../assets/lottie/coin.json";
 
 const EventDetailWrapper = styled.div`
   box-sizing: border-box;

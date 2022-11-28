@@ -1,19 +1,19 @@
 // 훅
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 // CSS
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 // 컴포넌트
-import Header from '../../components/Header';
-import Title from '../../components/Title';
-import WhiteGradientBox from '../../components/WhiteGradientBox';
-import WhiteBox from '../../components/WhiteBox';
-import EventBox from './components/EventBox';
-import Click from '../../components/Click';
-import SmallPhoneBackground from './components/SmallPhoneBackground';
-import EventDetail from './components/EventDetail';
-import BottomButton from '../../components/BottomButton';
+import Header from "../components/Header";
+import Title from "../components/Title";
+import WhiteGradientBox from "../components/WhiteGradientBox";
+import WhiteBox from "../components/WhiteBox";
+import EventBox from "../components/page5-economics/EventBox";
+import Click from "../components/Click";
+import SmallPhoneBackground from "../components/page5-economics/SmallPhoneBackground";
+import EventDetail from "../components/page5-economics/EventDetail";
+import BottomButton from "../components/BottomButton";
 // 데이터
-import { mockData } from '../../data/mockData';
+import { mockData } from "../data/mockData";
 
 //-- 애니메이션 --//
 const fadeIn = keyframes`
@@ -47,8 +47,8 @@ const MainImageContainer = styled.div`
 `;
 
 const Economics = () => {
-  const [title, setTitle] = useState('');
-  const [subtitle, setSubTitle] = useState('');
+  const [title, setTitle] = useState("");
+  const [subtitle, setSubTitle] = useState("");
   const [mainText, setMainText] = useState([]);
   const [isClick, setIsClick] = useState(false);
 
