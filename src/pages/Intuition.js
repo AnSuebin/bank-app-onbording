@@ -7,9 +7,11 @@ import Header from "../components/Header";
 import Title from "../components/Title";
 import WhiteBox from "../components/WhiteBox";
 import WhiteGradientBox from "../components/WhiteGradientBox";
-import Click from "../components/Click";
+
 import SelectBox from "../components/page6-intuition/SelectBox";
 import BottomButton from "../components/BottomButton";
+import CheckecdForward from "../components/page6-intuition/CheckedForward";
+import CheckecdBackward from "../components/page6-intuition/CheckedBackward";
 // 데이터
 import { mockData } from "../data/mockData";
 
@@ -22,15 +24,6 @@ from {
 to {
   opacity: 1;
   transform: translateY(0);
-}
-`;
-
-const opacity = keyframes`
-from {
-  opacity: 0;
-}
-to {
-  opacity: 1;
 }
 `;
 
@@ -50,51 +43,6 @@ const MainImageContainer = styled.div`
   animation-timing-function: ease-in-out;
   animation-name: ${fadeIn};
   animation-fill-mode: forwards;
-`;
-
-const WhiteSmallPhone = styled.div`
-  display: flex;
-  justify-content: center;
-
-  top: 32px;
-  width: 272px;
-  height: 296px;
-  background: #ffffff;
-  border: 1px solid #e6e7ea;
-  box-shadow: 0px 0px 40px rgba(51, 53, 56, 0.09);
-  border-radius: 36px 36px 0px 0px;
-`;
-
-const SmallPhoneImg = styled.img`
-  margin-top: 16px;
-  width: 232px;
-  height: 246px;
-  border-radius: 36px 36px 0px 0px;
-`;
-
-const WhiteBigPhone = styled.div`
-  display: flex;
-  justify-content: center;
-
-  top: 32px;
-  width: 300px;
-  height: 296px;
-  background: #ffffff;
-  border: 1px solid #e6e7ea;
-  box-shadow: 0px 0px 40px rgba(51, 53, 56, 0.09);
-  border-radius: 36px 36px 0px 0px;
-
-  animation-duration: 0.75s;
-  animation-timing-function: ease-in-out;
-  animation-name: ${opacity};
-  animation-fill-mode: backwards;
-`;
-
-const BigPhoneImg = styled.img`
-  margin-top: 16px;
-  width: 264px;
-  height: 246px;
-  border-radius: 36px 36px 0px 0px;
 `;
 
 const Shadow = styled.img`
@@ -133,33 +81,12 @@ const Intuition = () => {
           <WhiteBox></WhiteBox>
           <WhiteGradientBox></WhiteGradientBox>
           {isChecked === false && (
-            <>
-              <WhiteSmallPhone>
-                <SmallPhoneImg
-                  src={process.env.PUBLIC_URL + "/img/intuition/small-img.png"}
-                  alt="기본 모드"
-                ></SmallPhoneImg>
-              </WhiteSmallPhone>
-              <Click
-                top="188px"
-                transform="translateX(-15px)"
-                animationData="click"
-                onClick={() => {
-                  setIsChecked(!isChecked);
-                }}
-              />
-            </>
+            <CheckecdForward
+              isChecked={isChecked}
+              setIsChecked={setIsChecked}
+            />
           )}
-          {isChecked === true && (
-            <>
-              <WhiteBigPhone>
-                <BigPhoneImg
-                  src={process.env.PUBLIC_URL + "/img/intuition/big-img.png"}
-                  alt="큰글씨 모드"
-                ></BigPhoneImg>
-              </WhiteBigPhone>
-            </>
-          )}
+          {isChecked === true && <CheckecdBackward />}
           <SelectBox isChecked={isChecked} mainText={mainText} />
           <Shadow
             src={
