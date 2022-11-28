@@ -1,21 +1,21 @@
 // 훅
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 // CSS
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 // 컴포넌트
-import Header from '../../components/Header';
-import Title from '../../components/Title';
-import Recommendation from './components/Recommendation';
-import SubmitButton from './components/SubmitButton';
-import Click from '../../components/Click';
-import WhitePhoneBackground from '../../components/WhitePhoneBackground';
-import WhiteBox from '../../components/WhiteBox';
-import WhiteGradientBox from '../../components/WhiteGradientBox';
-import BottomButton from '../../components/BottomButton';
+import Header from "../../components/Header";
+import Title from "../../components/Title";
+import Recommendation from "./components/Recommendation";
+import SubmitButton from "./components/SubmitButton";
+import Click from "../../components/Click";
+import WhitePhoneBackground from "../../components/WhitePhoneBackground";
+import WhiteBox from "../../components/WhiteBox";
+import WhiteGradientBox from "../../components/WhiteGradientBox";
+import BottomButton from "../../components/BottomButton";
 // 데이터
-import { mockData } from '../../data/mockData';
+import { mockData } from "../../data/mockData";
 // 이미지 및 애니메이션
-import portfolio from '../../utils/professionalism/portfolio.png';
+// import portfolio from '../../utils/professionalism/portfolio.png';
 
 //-- 애니메이션 --//
 const fadeIn = keyframes`
@@ -104,8 +104,8 @@ const Portfolio = styled.img`
 `;
 
 const Professionalism = () => {
-  const [title, setTitle] = useState('');
-  const [subtitle, setSubTitle] = useState('');
+  const [title, setTitle] = useState("");
+  const [subtitle, setSubTitle] = useState("");
   const [mainText, setMainText] = useState([]);
   const [isClick, setIsClick] = useState(false);
 
@@ -151,7 +151,12 @@ const Professionalism = () => {
             <>
               <PortfolioContainer>
                 <div>
-                  <Portfolio src={portfolio}></Portfolio>
+                  <Portfolio
+                    src={
+                      process.env.PUBLIC_URL +
+                      "/img/professionalism/portfolio.png"
+                    }
+                  ></Portfolio>
                 </div>
               </PortfolioContainer>
             </>

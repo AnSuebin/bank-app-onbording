@@ -1,7 +1,7 @@
 // CSS
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 // 이미지
-import point from '../../../utils/economics/point-img.png';
+// import point from '../../../utils/economics/point-img.png';
 
 //-- 애니메이션 --//
 const fadeInbutton = keyframes`
@@ -40,7 +40,7 @@ const Event = styled.div`
   z-index: 3;
   p {
     margin-left: 32px;
-    font-family: 'Medium';
+    font-family: "Medium";
     font-size: 15px;
     line-height: 19px;
     letter-spacing: -0.02em;
@@ -51,7 +51,7 @@ const Event = styled.div`
     margin-left: 32px;
     width: 106px;
 
-    font-family: 'Medium';
+    font-family: "Medium";
     font-size: 21px;
     letter-spacing: -0.02em;
     color: #222222;
@@ -78,7 +78,7 @@ const Event = styled.div`
     box-shadow: 5.06896px 5.06896px 12.6724px rgba(144, 145, 146, 0.2);
     border-radius: 14px;
 
-    font-family: 'Medium';
+    font-family: "Medium";
     font-size: 17px;
     line-height: 22px;
     letter-spacing: -0.02em;
@@ -97,7 +97,10 @@ const EventBox = ({ mainText, onClick }) => {
           <span>{mainText.title1}</span>
           {mainText.title2}
         </h2>
-        <img src={point} alt="클릭"></img>
+        <img
+          src={process.env.PUBLIC_URL + "/img/economics/point-img.png"}
+          alt="클릭"
+        ></img>
         <button onClick={onClick}>이벤트 확인해보기</button>
       </Event>
     </>

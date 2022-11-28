@@ -1,22 +1,22 @@
 // 훅
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 // CSS
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 // 컴포넌트
-import Header from '../../components/Header';
-import Title from '../../components/Title';
-import WhiteBox from '../../components/WhiteBox';
-import WhiteGradientBox from '../../components/WhiteGradientBox';
-import Click from '../../components/Click';
-import SelectBox from './components/SelectBox';
-import BottomButton from '../../components/BottomButton';
+import Header from "../../components/Header";
+import Title from "../../components/Title";
+import WhiteBox from "../../components/WhiteBox";
+import WhiteGradientBox from "../../components/WhiteGradientBox";
+import Click from "../../components/Click";
+import SelectBox from "./components/SelectBox";
+import BottomButton from "../../components/BottomButton";
 // 데이터
-import { mockData } from '../../data/mockData';
+import { mockData } from "../../data/mockData";
 // 이미지 및 애니메이션
-import smallImg from '../../utils/intuition/small-img.png';
-import bigImg from '../../utils/intuition/big-img.png';
-import shadow from '../../utils/intuition/shadow.png';
-import smallShadow from '../../utils/intuition/small-shadow.png';
+// import smallImg from '../../utils/intuition/small-img.png';
+// import bigImg from '../../utils/intuition/big-img.png';
+// import shadow from '../../utils/intuition/shadow.png';
+// import smallShadow from '../../utils/intuition/small-shadow.png';
 
 //-- 애니메이션 --//
 const fadeIn = keyframes`
@@ -110,9 +110,9 @@ const Shadow = styled.img`
 `;
 
 const Intuition = () => {
-  const [title, setTitle] = useState('');
-  const [subtitle, setSubTitle] = useState('');
-  const [mainText, setMainText] = useState('');
+  const [title, setTitle] = useState("");
+  const [subtitle, setSubTitle] = useState("");
+  const [mainText, setMainText] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
@@ -140,7 +140,10 @@ const Intuition = () => {
           {isChecked === false && (
             <>
               <WhiteSmallPhone>
-                <SmallPhoneImg src={smallImg} alt="기본 모드"></SmallPhoneImg>
+                <SmallPhoneImg
+                  src={process.env.PUBLIC_URL + "/img/intuition/small-img.png"}
+                  alt="기본 모드"
+                ></SmallPhoneImg>
               </WhiteSmallPhone>
               <Click
                 top="188px"
@@ -155,12 +158,22 @@ const Intuition = () => {
           {isChecked === true && (
             <>
               <WhiteBigPhone>
-                <BigPhoneImg src={bigImg} alt="큰글씨 모드"></BigPhoneImg>
+                <BigPhoneImg
+                  src={process.env.PUBLIC_URL + "/img/intuition/big-img.png"}
+                  alt="큰글씨 모드"
+                ></BigPhoneImg>
               </WhiteBigPhone>
             </>
           )}
           <SelectBox isChecked={isChecked} mainText={mainText} />
-          <Shadow src={isChecked ? shadow : smallShadow} alt="" />
+          <Shadow
+            src={
+              isChecked
+                ? process.env.PUBLIC_URL + "/img/intuition/shadow.png"
+                : process.env.PUBLIC_URL + "/img/intuition/small-shadow.png"
+            }
+            alt=""
+          />
         </MainImageContainer>
       </Main>
       {isChecked === true && (

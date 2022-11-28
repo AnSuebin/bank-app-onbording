@@ -1,7 +1,7 @@
 // CSS
-import styled from 'styled-components';
+import styled from "styled-components";
 // 이미지
-import figure from '../../../utils/professionalism/figure.png';
+// import figure from '../../../utils/professionalism/figure.png';
 
 const InfoBox = styled.div`
   position: absolute;
@@ -17,7 +17,7 @@ const InfoBox = styled.div`
   h5 {
     margin-top: 65.01px;
     width: 200px;
-    font-family: 'Regular';
+    font-family: "Regular";
     font-size: 17px;
     line-height: 20px;
     text-align: center;
@@ -31,7 +31,7 @@ const InfoBox = styled.div`
   }
   h3 {
     padding-top: 11.88px;
-    font-family: 'Regular';
+    font-family: "Regular";
     font-size: 20px;
     line-height: 20px;
     letter-spacing: -0.02em;
@@ -39,7 +39,7 @@ const InfoBox = styled.div`
   }
   p {
     padding-top: 7px;
-    font-family: 'Regular';
+    font-family: "Regular";
     font-size: 13px;
     line-height: 19px;
     color: #6f787c;
@@ -51,7 +51,10 @@ const Recommendation = ({ mainText }) => {
     <>
       <InfoBox>
         <h5>{mainText.subTitle}</h5>
-        <img src={figure} alt="수치" />
+        <img
+          src={process.env.PUBLIC_URL + "/img/professionalism/figure.png"}
+          alt="수치"
+        />
         <h3>{mainText.title}</h3>
         <p>{mainText.text}</p>
       </InfoBox>

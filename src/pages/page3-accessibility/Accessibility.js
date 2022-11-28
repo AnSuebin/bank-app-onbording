@@ -1,23 +1,23 @@
 //훅
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 // CSS
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 // 컴포넌트
-import BottomButton from '../../components/BottomButton';
-import Title from '../../components/Title';
-import Header from '../../components/Header';
-import PhoneBackground from '../../components/PhoneBackground';
-import TypingText from './components/TypingText';
-import Text from './components/Text';
-import WhiteBox from '../../components/WhiteBox';
-import WhiteGradientBox from '../../components/WhiteGradientBox';
-import WhitePhoneBackground from '../../components/WhitePhoneBackground';
+import BottomButton from "../../components/BottomButton";
+import Title from "../../components/Title";
+import Header from "../../components/Header";
+import PhoneBackground from "../../components/PhoneBackground";
+import TypingText from "./components/TypingText";
+import Text from "./components/Text";
+import WhiteBox from "../../components/WhiteBox";
+import WhiteGradientBox from "../../components/WhiteGradientBox";
+import WhitePhoneBackground from "../../components/WhitePhoneBackground";
 //데이터
-import { mockData } from '../../data/mockData';
+import { mockData } from "../../data/mockData";
 // 이미지 및 애니메이션
-import Recommendation from '../../utils/accessibility/recommendation.png';
-import Lottie from 'lottie-react';
-import voice from '../../assets/lottie/voice.json';
+// import Recommendation from '../../utils/accessibility/recommendation.png';
+import Lottie from "lottie-react";
+import voice from "../../assets/lottie/voice.json";
 
 //-- 애니메이션 --//
 const fadeIn = keyframes`
@@ -84,7 +84,7 @@ const RecommendationContainer = styled.div`
   align-items: center;
   margin-top: 283px;
   h5 {
-    font-family: 'Bold';
+    font-family: "Bold";
     font-size: 21px;
     line-height: 26px;
     letter-spacing: -0.02em;
@@ -97,7 +97,7 @@ const RecommendationContainer = styled.div`
     animation-fill-mode: backwards;
   }
   p {
-    font-family: 'Regular';
+    font-family: "Regular";
     font-size: 17px;
     line-height: 21px;
     letter-spacing: -0.02em;
@@ -157,8 +157,8 @@ const RecomendInfo = styled.div`
 `;
 
 const Accessibility = () => {
-  const [title, setTitle] = useState('');
-  const [subtitle, setSubTitle] = useState('');
+  const [title, setTitle] = useState("");
+  const [subtitle, setSubTitle] = useState("");
   const [textList, setTextList] = useState([]);
   const [isTimeout, setIsTimeout] = useState(false);
   const [PageTurnOver, setPageTurnOver] = useState(false);
@@ -232,7 +232,13 @@ const Accessibility = () => {
             <>
               <RecomendInfo>
                 <div>
-                  <img src={Recommendation} alt="연금 추천 상품" />
+                  <img
+                    src={
+                      process.env.PUBLIC_URL +
+                      "/img/accessibility/recommendation.png"
+                    }
+                    alt="연금 추천 상품"
+                  />
                 </div>
               </RecomendInfo>
               <WhitePhoneBackground />

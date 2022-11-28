@@ -1,19 +1,19 @@
 // 훅
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 // CSS
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 // 컴포넌트
-import Header from '../../components/Header';
-import Title from '../../components/Title';
-import WhiteGradientBox from '../../components/WhiteGradientBox';
-import WhiteBox from '../../components/WhiteBox';
-import Conversation from './components/Conversation';
-import BottomButton from '../../components/BottomButton';
+import Header from "../../components/Header";
+import Title from "../../components/Title";
+import WhiteGradientBox from "../../components/WhiteGradientBox";
+import WhiteBox from "../../components/WhiteBox";
+import Conversation from "./components/Conversation";
+import BottomButton from "../../components/BottomButton";
 // 데이터
-import { mockData } from '../../data/mockData';
+import { mockData } from "../../data/mockData";
 // 이미지
-import facetalk from '../../utils/convenience/facetalk.gif';
-import myfacetalk from '../../utils/convenience/myfacetalk.gif';
+// import facetalk from '../../utils/convenience/facetalk.gif';
+// import myfacetalk from '../../utils/convenience/myfacetalk.gif';
 
 //-- 애니메이션 --//
 const fadeIn = keyframes`
@@ -62,8 +62,8 @@ const Facetalk = styled.img`
 `;
 
 const Convenience = () => {
-  const [title, setTitle] = useState('');
-  const [subtitle, setSubTitle] = useState('');
+  const [title, setTitle] = useState("");
+  const [subtitle, setSubTitle] = useState("");
 
   useEffect(() => {
     const [pageData] = mockData.filter((page) => page.id === 2);
@@ -79,8 +79,14 @@ const Convenience = () => {
         <MainImageContainer>
           <WhiteGradientBox />
           <WhiteBox />
-          <Myfacetalk src={myfacetalk} alt="나의 대화화면" />
-          <Facetalk src={facetalk} alt="상담사 대화화면" />
+          <Myfacetalk
+            src={process.env.PUBLIC_URL + "/img/convenience/myfacetalk.gif"}
+            alt="나의 대화화면"
+          />
+          <Facetalk
+            src={process.env.PUBLIC_URL + "/img/convenience/facetalk.gif"}
+            alt="상담사 대화화면"
+          />
           <Conversation />
         </MainImageContainer>
       </Main>

@@ -1,7 +1,7 @@
 // CSS
-import styled from 'styled-components';
+import styled from "styled-components";
 // 이미지
-import bank from '../utils/bank.png';
+// import bank from "./img/bank.png";
 
 const MainPage = styled.div`
   display: flex;
@@ -18,7 +18,10 @@ const MainPage = styled.div`
 const Bank = () => {
   return (
     <MainPage>
-      <img src={bank} alt="국민 은행 앱"></img>
+      <img
+        src={process.env.PUBLIC_URL + "/img/bank.png"}
+        alt="국민 은행 앱"
+      ></img>
     </MainPage>
   );
 };

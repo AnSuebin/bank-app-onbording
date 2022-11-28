@@ -1,7 +1,7 @@
 // CSS
-import styled from 'styled-components';
+import styled from "styled-components";
 // 이미지
-import WaringIcon from '../../../utils/safety/warning-icon.png';
+// import WaringIcon from '../../../utils/safety/warning-icon.png';
 
 const Warning = styled.div`
   box-sizing: border-box;
@@ -30,7 +30,7 @@ const Warning = styled.div`
   }
   p {
     margin-top: 8px;
-    font-family: 'Medium';
+    font-family: "Medium";
     font-size: 15px;
     line-height: 21px;
     text-align: center;
@@ -39,7 +39,7 @@ const Warning = styled.div`
     letter-spacing: -0.02em;
     color: #343434;
     span {
-      font-family: 'Bold';
+      font-family: "Bold";
     }
   }
 `;
@@ -48,7 +48,10 @@ const WarningBox = () => {
   return (
     <>
       <Warning>
-        <img src={WaringIcon} alt="악성앱 탐지 아이콘" />
+        <img
+          src={process.env.PUBLIC_URL + "/img/safety/warning-icon.png"}
+          alt="악성앱 탐지 아이콘"
+        />
         <p>
           제 3자가 임의로 설치한 것으로 의심되는 <span>악성앱이 탐지</span>
           되었습니다.

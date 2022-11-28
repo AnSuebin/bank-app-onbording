@@ -1,9 +1,9 @@
 // CSS
-import styled from 'styled-components';
+import styled from "styled-components";
 // 이미지 및 애니메이션
-import eventDetail from '../../../utils/economics/event.png';
-import Lottie from 'lottie-react';
-import coin from '../../../assets/lottie/coin.json';
+// import eventDetail from '../../../utils/economics/event.png';
+import Lottie from "lottie-react";
+import coin from "../../../assets/lottie/coin.json";
 
 const EventDetailWrapper = styled.div`
   box-sizing: border-box;
@@ -50,7 +50,10 @@ const EventDetail = () => {
       <EventDetailWrapper>
         <div>
           <Lottie animationData={coin} options={options} loop={false} />
-          <img src={eventDetail} alt="적금 이벤트" />
+          <img
+            src={process.env.PUBLIC_URL + "/img/economics/event.png"}
+            alt="적금 이벤트"
+          />
         </div>
       </EventDetailWrapper>
     </>

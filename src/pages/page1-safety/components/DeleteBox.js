@@ -1,8 +1,8 @@
 // CSS
-import styled from 'styled-components';
+import styled from "styled-components";
 // 이미지
-import bankIcon from '../../../utils/safety/bank-icon.png';
-import alarm from '../../../utils/safety/alarm.png';
+// import bankIcon from "img/bank-icon.png";
+// import alarm from "img/alarm.png";
 
 const DeleteContainer = styled.div`
   box-sizing: border-box;
@@ -34,7 +34,7 @@ const DeleteContainer = styled.div`
     border: none;
     border-radius: 4px;
 
-    font-family: 'Medium';
+    font-family: "Medium";
     font-size: 13px;
     line-height: 16px;
   }
@@ -55,7 +55,7 @@ const BankName = styled.div`
   div {
     display: flex;
     h5 {
-      font-family: 'Medium';
+      font-family: "Medium";
       font-size: 15px;
       line-height: 19px;
       letter-spacing: -0.02em;
@@ -72,7 +72,7 @@ const BankName = styled.div`
 
   p {
     margin-top: 2px;
-    font-family: 'Medium';
+    font-family: "Medium";
     font-size: 11px;
     line-height: 14px;
     letter-spacing: -0.02em;
@@ -85,11 +85,17 @@ const DeleteBox = ({ setIsClick }) => {
     <>
       <DeleteContainer>
         <BankContainer>
-          <img src={bankIcon} alt="kb 국민은행 app 아이콘" />
+          <img
+            src={process.env.PUBLIC_URL + "/img/safety/bank-icon.png"}
+            alt="kb 국민은행 app 아이콘"
+          />
           <BankName>
             <div>
               <h5>KB 국민은행</h5>
-              <img src={alarm} alt="경고"></img>
+              <img
+                src={process.env.PUBLIC_URL + "/img/safety/alarm.png"}
+                alt="경고"
+              ></img>
             </div>
             <p>IP:Rag26w_sh4</p>
           </BankName>
