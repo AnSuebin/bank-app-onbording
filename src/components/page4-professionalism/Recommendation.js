@@ -1,7 +1,5 @@
 // CSS
 import styled from "styled-components";
-// 이미지
-// import figure from '../../../utils/professionalism/figure.png';
 
 const InfoBox = styled.div`
   position: absolute;

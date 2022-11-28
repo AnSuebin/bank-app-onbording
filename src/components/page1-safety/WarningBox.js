@@ -1,7 +1,5 @@
 // CSS
 import styled from "styled-components";
-// 이미지
-// import WaringIcon from '../../../utils/safety/warning-icon.png';
 
 const Warning = styled.div`
   box-sizing: border-box;

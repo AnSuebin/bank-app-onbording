@@ -11,9 +11,6 @@ import Conversation from "../components/page2-convenience/Conversation";
 import BottomButton from "../components/BottomButton";
 // 데이터
 import { mockData } from "../data/mockData";
-// 이미지
-// import facetalk from '../../utils/convenience/facetalk.gif';
-// import myfacetalk from '../../utils/convenience/myfacetalk.gif';
 
 //-- 애니메이션 --//
 const fadeIn = keyframes`

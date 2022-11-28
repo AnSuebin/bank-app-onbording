@@ -1,8 +1,5 @@
 // CSS
 import styled from "styled-components";
-// 이미지
-// import bankIcon from "img/bank-icon.png";
-// import alarm from "img/alarm.png";
 
 const DeleteContainer = styled.div`
   box-sizing: border-box;

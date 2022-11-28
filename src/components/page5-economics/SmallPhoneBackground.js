@@ -1,8 +1,5 @@
 // CSS
 import styled from "styled-components";
-// 이미지
-// import logo from '../../../utils/economics/logo-icon.png';
-// import menu from '../../../utils/economics/menu-icon.png';
 
 const SmallPhone = styled.div`
   position: absolute;

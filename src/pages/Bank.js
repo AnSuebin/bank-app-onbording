@@ -1,7 +1,5 @@
 // CSS
 import styled from "styled-components";
-// 이미지
-// import bank from "./img/bank.png";
 
 const MainPage = styled.div`
   display: flex;

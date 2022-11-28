@@ -1,7 +1,5 @@
 // CSS
 import styled, { keyframes } from "styled-components";
-// 이미지
-// import point from '../../../utils/economics/point-img.png';
 
 //-- 애니메이션 --//
 const fadeInbutton = keyframes`
