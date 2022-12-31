@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/bank-app-onbording/static/css/main.cb1aef1f.css",
+    "main.js": "/bank-app-onbording/static/js/main.be0a6471.js",
+    "static/media/SpoqaHanSansNeo-Thin.ttf": "/bank-app-onbording/static/media/SpoqaHanSansNeo-Thin.b8666c6d2d1d929509a1.ttf",
+    "static/media/SpoqaHanSansNeo-Light.ttf": "/bank-app-onbording/static/media/SpoqaHanSansNeo-Light.008270707379c4b4bc51.ttf",
+    "static/media/SpoqaHanSansNeo-Regular.ttf": "/bank-app-onbording/static/media/SpoqaHanSansNeo-Regular.b935041cbcc86b551721.ttf",
+    "static/media/SpoqaHanSansNeo-Medium.ttf": "/bank-app-onbording/static/media/SpoqaHanSansNeo-Medium.cf5c6ddcaec3f59a13c7.ttf",
+    "static/media/SpoqaHanSansNeo-Bold.ttf": "/bank-app-onbording/static/media/SpoqaHanSansNeo-Bold.9a610369db9d3c28b99f.ttf",
+    "index.html": "/bank-app-onbording/index.html",
+    "main.cb1aef1f.css.map": "/bank-app-onbording/static/css/main.cb1aef1f.css.map",
+    "main.be0a6471.js.map": "/bank-app-onbording/static/js/main.be0a6471.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb1aef1f.css",
+    "static/js/main.be0a6471.js"
+  ]
+}
